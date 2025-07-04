@@ -1,0 +1,56 @@
+name: Deploy VitePress Docs
+
+on:
+  push:
+    branches: [ deploy ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '选择发布版本的tag (alpha/beta/latest)'
+        required: true
+        default: 'alpha'
+        type: choice
+        options:
+          - alpha
+          - beta
+          - latest
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 使用Node.js 20版本
+          registry-url: 'https://registry.npmjs.org' # 设置npm registry地址
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Build VitePress
+        run: pnpm build:docs --base=/tiny-robot/${{ inputs.tag || 'latest' }}/
+
+      - name: Verify build output
+        run: ls -la ./docs/dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/dist
+          # 如果你的 VitePress 配置了 base URL
+          destination_dir: ./${{ inputs.tag || 'latest' }}/  # 当 base 是 '/' 时不需要
+          keep_files: true  # 清除之前部署的文件
+          force_orphan: false  # 确保每次都是全新部署
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
