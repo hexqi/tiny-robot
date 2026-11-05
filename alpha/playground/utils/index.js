@@ -1,6 +1,6 @@
 import { useVueImportMap as g, useStore as $, File as f } from "@vue/repl";
-function A(i) {
-  const { tinyRobotVersion: t = "latest" } = i || {};
+function V(o) {
+  const { tinyRobotVersion: t = "latest" } = o || {};
   return [
     {
       filename: "src/App.vue",
@@ -36,20 +36,28 @@ import { TrBubble } from '@opentiny/tiny-robot'
     }
   ];
 }
-function M(i) {
-  const { tinyRobotVersion: t, builtinImportMap: e, extraImports: c } = i, p = `https://cdn.jsdelivr.net/npm/@opentiny/tiny-robot@${t}/dist/vanilla`, a = `const link = document.createElement('link');
+function M(o) {
+  const { tinyRobotVersion: t, builtinImportMap: e, extraImports: d } = o, a = `https://cdn.jsdelivr.net/npm/@opentiny/tiny-robot@${t}/dist/vanilla`, l = `const link = document.createElement('link');
 link.rel = 'stylesheet';
-link.href = ${JSON.stringify(`${p}/style.css`)};
-document.head.appendChild(link);`, o = Object.entries(c || {}).map(([n, r]) => ({
-    [n]: `https://cdn.jsdelivr.net/npm/${n}@${r}`
-  })).reduce((n, r) => ({ ...n, ...r }), {});
+link.href = ${JSON.stringify(`${a}/style.css`)};
+document.head.appendChild(link);`, i = "https://esm.sh/monaco-editor@0.57.0", c = `const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = ${JSON.stringify(`${i}/es2022/editor/editor.api.css`)};
+await new Promise((resolve, reject) => {
+  link.onload = resolve;
+  link.onerror = () => reject(new Error('Failed to load Monaco editor styles'));
+  document.head.appendChild(link);
+});
+export * from ${JSON.stringify(`${i}/editor/editor.api?target=es2022`)};`, r = Object.entries(d || {}).map(([n, p]) => ({
+    [n]: `https://cdn.jsdelivr.net/npm/${n}@${p}`
+  })).reduce((n, p) => ({ ...n, ...p }), {});
   return {
     imports: {
       ...e == null ? void 0 : e.imports,
       // TinyRobot 相关包 - 使用统一版本号
       "@opentiny/tiny-robot": `https://cdn.jsdelivr.net/npm/@opentiny/tiny-robot@${t}/dist/index.min.js`,
-      "@opentiny/tiny-robot/vanilla": `${p}/index.js`,
-      "@opentiny/tiny-robot/vanilla/style.css": `data:text/javascript,${encodeURIComponent(a)}`,
+      "@opentiny/tiny-robot/vanilla": `${a}/index.js`,
+      "@opentiny/tiny-robot/vanilla/style.css": `data:text/javascript,${encodeURIComponent(l)}`,
       "@opentiny/tiny-robot-svgs": `https://cdn.jsdelivr.net/npm/@opentiny/tiny-robot-svgs@${t}/dist/tiny-robot-svgs.min.js`,
       "@opentiny/tiny-robot-kit": `https://cdn.jsdelivr.net/npm/@opentiny/tiny-robot-kit@${t}/dist/index.mjs`,
       // TinyVue 相关包
@@ -64,6 +72,11 @@ document.head.appendChild(link);`, o = Object.entries(c || {}).map(([n, r]) => (
       echarts: "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
       idb: "https://cdn.jsdelivr.net/npm/idb@8/+esm",
       yaml: "https://cdn.jsdelivr.net/npm/yaml@2/browser/index.min.js",
+      "monaco-editor/editor/editor.api": `data:text/javascript,${encodeURIComponent(c)}`,
+      "monaco-editor/languages/definitions/typescript/register": `${i}/languages/definitions/typescript/register?bundle=false&target=es2022`,
+      // Route the language module's relative editor import to the same bundled
+      // API, avoiding duplicate registries and raw CSS imports in the browser.
+      [`${i}/es2022/esm/vs/editor/editor.api.nobundle.mjs`]: `data:text/javascript,${encodeURIComponent(c)}`,
       // Tiptap 编辑器相关包 (用于 Sender 组件)
       // 使用 esm.sh CDN，自动处理子路径导入和依赖解析
       // 添加 ?external=vue 参数，避免 Vue 版本冲突
@@ -78,41 +91,41 @@ document.head.appendChild(link);`, o = Object.entries(c || {}).map(([n, r]) => (
       "@tiptap/extension-history": "https://esm.sh/@tiptap/extension-history@3.17.1",
       "@tiptap/extension-placeholder": "https://esm.sh/@tiptap/extension-placeholder@3.17.1",
       "@tiptap/extension-character-count": "https://esm.sh/@tiptap/extension-character-count@3.17.1",
-      ...o
+      ...r
     }
   };
 }
-const I = (i) => {
-  const { files: t, tinyRobotVersion: e = "latest", vueVersion: c = "latest", extraImports: p } = i, { importMap: a, vueVersion: o, productionMode: m } = g();
-  o.value = c, m.value = !0;
-  const n = $({
+const I = (o) => {
+  const { files: t, tinyRobotVersion: e = "latest", vueVersion: d = "latest", extraImports: a } = o, { importMap: l, vueVersion: i, productionMode: c } = g();
+  i.value = d, c.value = !0;
+  const r = $({
     // pre-set import map
-    builtinImportMap: a,
-    vueVersion: o
+    builtinImportMap: l,
+    vueVersion: i
   });
   if (t && t.length > 0) {
-    for (const l of t)
-      n.addFile(l instanceof f ? l : new f(l.filename, l.code));
-    n.setActive(t[0].filename);
+    for (const n of t)
+      r.addFile(n instanceof f ? n : new f(n.filename, n.code));
+    r.setActive(t[0].filename);
   }
-  const r = M({
+  const m = M({
     tinyRobotVersion: e,
-    builtinImportMap: a.value,
-    extraImports: p
+    builtinImportMap: l.value,
+    extraImports: a
   });
-  return n.setImportMap(r), {
-    store: n,
-    builtinImportMap: a,
-    vueVersion: o
+  return r.setImportMap(m), {
+    store: r,
+    builtinImportMap: l,
+    vueVersion: i
   };
 }, b = /* @__PURE__ */ new Map();
-async function k(i, t = {}) {
-  var n, r;
-  const { includePrerelease: e = !1, limit: c = 20, includeLatest: p = !0 } = t, a = Array.isArray(e) ? e.join(",") : e, o = `${i}-${a}-${c}-${p}`, m = b.get(o);
-  if (m)
-    return m;
+async function A(o, t = {}) {
+  var r, m;
+  const { includePrerelease: e = !1, limit: d = 20, includeLatest: a = !0 } = t, l = Array.isArray(e) ? e.join(",") : e, i = `${o}-${l}-${d}-${a}`, c = b.get(i);
+  if (c)
+    return c;
   try {
-    const d = await (await fetch(`https://registry.npmmirror.com/${i}`)).json(), j = (d == null ? void 0 : d.time) || {}, x = (n = d["dist-tags"]) == null ? void 0 : n.latest;
+    const p = await (await fetch(`https://registry.npmmirror.com/${o}`)).json(), j = (p == null ? void 0 : p.time) || {}, x = (r = p["dist-tags"]) == null ? void 0 : r.latest;
     let u = Object.entries(j).filter(([s]) => s !== "created" && s !== "modified").slice().sort((s, v) => new Date(v[1]).getTime() - new Date(s[1]).getTime()).map(([s]) => s).filter((s) => {
       if (typeof e == "boolean") {
         if (!e && /[a-zA-Z]/.test(s))
@@ -123,16 +136,16 @@ async function k(i, t = {}) {
         return !1;
       return !0;
     });
-    u = u.slice(0, c), p && ((r = d["dist-tags"]) != null && r.latest) && (u.includes("latest") || u.unshift("latest"));
+    u = u.slice(0, d), a && ((m = p["dist-tags"]) != null && m.latest) && (u.includes("latest") || u.unshift("latest"));
     const y = { versions: u, lastVersion: x };
-    return b.set(o, y), y;
-  } catch (l) {
-    return console.error(`Failed to fetch versions for ${i}:`, l), { versions: ["latest"], lastVersion: void 0 };
+    return b.set(i, y), y;
+  } catch (n) {
+    return console.error(`Failed to fetch versions for ${o}:`, n), { versions: ["latest"], lastVersion: void 0 };
   }
 }
 export {
   M as generateImportMap,
   I as generateStore,
-  A as getDefaultFiles,
-  k as getVersions
+  V as getDefaultFiles,
+  A as getVersions
 };
