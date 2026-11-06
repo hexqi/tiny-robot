@@ -1,0 +1,32 @@
+{
+  "source": "Mapzen Terrain Tiles / AWS; USGS, NOAA",
+  "accessed": "2026-11-07",
+  "renders": [
+    {
+      "name": "china",
+      "bounds": [
+        68,
+        16,
+        142,
+        56
+      ],
+      "width": 3200,
+      "height": 1977,
+      "tileZoom": 6,
+      "file": "assets/terrain-china.webp"
+    },
+    {
+      "name": "chibi",
+      "bounds": [
+        106,
+        25,
+        124,
+        38
+      ],
+      "width": 2400,
+      "height": 1981,
+      "tileZoom": 8,
+      "file": "assets/terrain-chibi.webp"
+    }
+  ]
+}

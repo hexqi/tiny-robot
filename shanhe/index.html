@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142324"><meta name="description" content="从黄巾、群雄逐鹿、官渡到赤壁，沿事件、人物与山河探索汉末三国。">
+  <title>山河 · 三国 — 走进历史的此时此地</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='5' y='5' width='54' height='54' rx='4' fill='%239c5140'/%3E%3Ctext x='32' y='45' text-anchor='middle' fill='%23f6ecd1' font-size='40' font-family='serif'%3E山%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="山河三国首页"><span class="brand-seal">山河</span><span class="brand-name">山河<span>三国</span></span><span class="brand-caption">历史，自有来处</span></a>
+    <nav class="main-nav" aria-label="主导航"><button class="nav-item active" data-view="world">故事沙盘</button><button class="nav-item" data-view="people">人物志</button><button class="nav-item" data-view="quest">探索手记 <span id="quest-badge">0/3</span></button></nav>
+    <button class="search-trigger" id="search-open"><span aria-hidden="true">⌕</span><span>搜人物、地点、故事</span><kbd>/</kbd></button>
+    <button class="icon-button info-trigger" id="about-open" aria-label="关于地图与史料">i</button>
+  </header>
+  <nav class="mobile-workspace-switch" aria-label="阅读与地图"><button data-panel="read" aria-pressed="true">阅读与人物</button><button data-panel="map" aria-pressed="false">查看地图</button></nav>
+  <main class="app-layout">
+    <aside class="explore-sidebar" aria-label="历史探索面板">
+    <nav class="period-sidebar" aria-label="选择历史篇章"><div class="period-heading"><span>汉末三国 · 历史篇章</span><small>184—208</small></div><div id="period-list" class="period-list"></div></nav>
+    <section class="chapter-sidebar">
+      <div class="eyebrow">THE THREE KINGDOMS</div>
+      <div class="chapter-heading"><span class="volume">卷一</span><h1>赤壁风云</h1></div>
+      <p class="chapter-subtitle">从荆州易主，到华容道。<br>把散落的故事，连成一盘天下。</p>
+      <div class="chapter-rule"><span>演义第 40—50 回</span><span id="content-count"></span></div>
+      <details class="story-catalog" id="story-catalog"><summary><span>故事目录</span><strong id="catalog-current"></strong><i>⌄</i></summary><div class="chapter-list" id="chapters" aria-label="历史阶段"></div>
+      <section class="episode-section"><div class="section-label">本幕故事 <span id="episode-count"></span></div><div id="event-list" aria-label="本阶段事件"></div></section>
+      </details><section class="perspective-section"><div class="section-label">这一幕中的人物 <span id="cast-count"></span></div><div class="people-grid" id="people-grid"></div><button class="all-people" data-view="people">查看全部人物 →</button></section>
+      <button class="text-button source-button" id="sources-open">关于这段历史 <span>↗</span></button>
+    </section>
+    <aside class="detail-sidebar" aria-label="历史详情"><div id="detail"></div><div class="detail-footer"><span>循着线索，读懂历史</span><span>山河 · 赤壁篇</span></div></aside>
+    </aside>
+    <section class="world" aria-label="三国交互地图">
+      <div class="map-toolbar">
+        <div class="scope-switch" aria-label="地图视野"><button id="scope-national" aria-pressed="true">全国山河</button><button id="scope-battle" aria-pressed="false">赤壁战场</button></div>
+        <span class="toolbar-context" id="map-period">建安十三年</span>
+        <div class="map-toolbar-actions"><button id="map-settings-toggle" aria-expanded="false" aria-controls="map-settings">图层 <span aria-hidden="true">▱</span></button><button id="map-expand" aria-pressed="false">沉浸地图 ⤢</button></div>
+      </div>
+      <section class="map-settings" id="map-settings" aria-label="地图图层设置" hidden>
+        <div class="map-panel-heading"><strong>地图图层</strong><button data-close-map-panel="map-settings" aria-label="关闭图层设置">×</button></div>
+        <div class="map-mode" aria-label="显示内容"><button id="terrain-toggle" aria-pressed="true">地形</button><button id="cities-toggle" aria-pressed="true">城池</button><button id="territory-toggle" aria-pressed="false">势力</button><button id="route-toggle" aria-pressed="true">行迹</button></div>
+        <div class="atlas-controls"><div class="atlas-modes" aria-label="古今地图对照"><button data-map-mode="ancient" aria-pressed="true">古代政区</button><button data-map-mode="modern" aria-pressed="false">现代政区</button><button data-map-mode="compare" aria-pressed="false">叠加对照</button></div><label class="admin-control">行政层级 <select id="admin-level" aria-label="行政层级"><option value="zhou">州 / 省</option><option value="jun" selected>郡 / 省</option><option value="county">县治 / 现代县界</option></select></label></div>
+        <div class="atlas-status" id="atlas-status" role="status"></div>
+        <p id="zoom-hint">滚轮缩放 · 拖动探索</p>
+      </section>
+      <div class="map-container" id="map-container">
+        <svg id="history-map" viewBox="0 0 980 700" aria-label="全国地形、城池与汉末三国事件地图，可拖动和缩放" role="img"></svg>
+        <div class="map-title"><span id="map-scope">东汉州郡框架 · 教学示意</span><h2 id="map-kicker">风起荆襄</h2><p id="map-subtitle">山川为局，人物落子</p></div>
+        <div class="compass" aria-hidden="true"><span>北</span><svg viewBox="0 0 42 60"><path d="M21 4 30 40 21 33 12 40Z" fill="currentColor"/><path d="M21 33 21 55M8 33H34" stroke="currentColor" fill="none"/></svg><small>N</small></div>
+        <div class="map-tools"><button id="zoom-in" aria-label="放大地图">＋</button><button id="zoom-out" aria-label="缩小地图">−</button><button id="zoom-reset" aria-label="恢复地图视野">⌖</button></div>
+        <div class="map-caption"><span>古界为概略示意，非精确复原</span><button id="map-info">数据与边界说明 ↗</button></div>
+        <div class="map-legend" id="map-legend"></div>
+        <div id="south-sea" class="south-sea"><span>南海诸岛</span><svg viewBox="0 0 100 112" aria-label="南海海域与岛群位置示意"></svg><small>岛群位置示意</small></div>
+        <div id="terrain-key" class="terrain-key"><span>地势</span><i></i><small>低 → 高</small></div>
+      </div>
+      <div class="episode-player"><button id="previous-event" aria-label="上一个事件">←</button><button id="play" class="play-button" aria-label="播放历史进程"><span id="play-symbol">▶</span></button><button id="next-event" aria-label="下一个事件">→</button><div class="episode-caption"><span id="event-progress"></span><strong id="event-now"></strong></div><button id="locate-event">定位此事 ⌖</button><button id="timeline-toggle" aria-expanded="false" aria-controls="timeline-panel">阶段 ⌃</button></div>
+      <section class="timeline-panel" id="timeline-panel" aria-label="故事阶段与时间轴" hidden>
+        <div class="map-panel-heading"><strong>故事阶段</strong><button data-close-map-panel="timeline-panel" aria-label="关闭故事阶段">×</button></div>
+        <section class="timeline" aria-label="历史时间轴"><div class="year-display"><span>公元</span><strong>208</strong><small>建安十三年</small></div><div class="timeline-track"><div class="timeline-labels" id="timeline-labels"></div><input id="time-slider" type="range" min="0" max="3" step="1" value="0" aria-label="历史阶段"><div class="timeline-bottom"><span>南征之初</span><span id="play-status">按事件阶段推进</span><span>赤壁之战</span></div></div><button id="next-stage" class="next-button" aria-label="下一个阶段">→</button></section>
+        <div class="context-bar"><span class="context-icon">变</span><p id="change-text"></p></div>
+      </section>
+    </section>
+
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="life-reader" class="life-reader" aria-labelledby="reader-title">
+    <header class="reader-top"><div><span id="reader-person"></span><small id="reader-count"></small></div><button class="reader-close" data-close="life-reader" aria-label="关闭阅读，返回人物">返回人物 <span aria-hidden="true">×</span></button></header>
+    <div id="reader-scroll" class="reader-scroll"><h2 id="reader-title" tabindex="-1"></h2><article id="reader-content" class="life-prose"></article></div>
+    <nav id="reader-navigation" class="life-neighbors reader-navigation" aria-label="连续阅读人物事迹"></nav>
+  </dialog>
+  <dialog id="search-dialog" class="search-dialog"><div class="dialog-top"><span>寻找此时此地</span><button class="dialog-close" data-close="search-dialog" aria-label="关闭搜索">×</button></div><label class="search-field"><span aria-hidden="true">⌕</span><input id="search-input" autocomplete="off" placeholder="试试「草船借箭」「阚泽」「南郡」" aria-label="搜索人物、地点与事件"></label><div id="search-results" class="search-results"></div><p class="dialog-hint" id="search-hint"></p></dialog>
+  <dialog id="about-dialog" class="about-dialog"><div class="dialog-top"><span>地图与史料</span><button class="dialog-close" data-close="about-dialog" aria-label="关闭说明">×</button></div><h2>让历史有迹可循</h2><p>已收录 184—208 年的四篇故事：黄巾与汉廷危机、群雄逐鹿、官渡与北方整合、赤壁风云。前三篇以史籍为主线，可切换演义对照；赤壁篇沿《三国演义》第 40—50 回推进，可查看史实对照。不同材料与叙事次序分别标明。</p><h3>如何看这张地图</h3><p>古代州郡边界是本项目绘制的教学示意，采用东汉旧州郡框架，不代表 208 年末逐次分郡后的精确边界；县级只提供县治和隶属关系，不提供未经考证的古县界。现代省界来自 geoBoundaries 2019 快照，现代县界来自 2017 快照，不是 2026 年实时区划。三种模式共用经纬度投影，可直接叠加。河流与海岸采用 Natural Earth 现代自然地理数据。</p><p>全国视野提供现代地形背景、34 个省级源要素和主要城池索引；古代州郡详图仍限于赤壁专题。晕渲来自 Mapzen / USGS / NOAA 现代高程，帮助理解山脉、平原和河谷，不代表古代河道与城防。城池、渡口和战场使用分类符号，均为约位。前三篇的「控制点」只表示当前事件涉及的少量据点，不表示完整疆域；未标注地点不意味着无人控制。</p><h3>从人物走进历史</h3><p>人物志可在「本篇人物」和「全部人物」之间切换，按阵营查人，再沿年表和地图查看背景、经过与影响；点「展开阅读」可连续阅读前后事迹。人生行迹与赤壁小说故事分别呈现；每篇故事提供对应史籍卷次与篇目，注引材料及小说情节另作说明。地点不详的条目只保留在年表中；地图连线只连接已收录地点，不代表完整旅程或精确道路。身份优先采用当前篇章的背景；阵营分组用于检索，不代表终生归属。</p><h3>如何读这段故事</h3><p>内容参考《三国志》武帝纪、先主传、周瑜鲁肃吕蒙传、诸葛亮传等篇章，采用现代语言概述。前三篇的史籍故事、演义对照与赤壁篇的小说叙事分别呈现；对白、计谋链与人物场景不当作史料。地图上的故事落点是区域约位；路线为事件关联地点连线，不代表人物精确行军路径。赤壁、华容道等位置存在争议。</p><div id="source-links" class="source-links"></div><p class="small-note">进度和探索记录仅保存在当前浏览器。此版尚未收录完整三国历史，也未提供精细的古河道与疆界复原。</p><button class="outline-button" id="reset-progress">清除本地探索记录</button></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
