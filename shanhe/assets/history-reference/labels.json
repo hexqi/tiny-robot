@@ -1,0 +1,333 @@
+{
+  "note": "由原图文字人工转写，州名位置为排版锚点，非治所；政区面和完整目录尚未建立。",
+  "labels": [
+    {
+      "name": "魏",
+      "sourceXY": [
+        1477,
+        575.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "东郡",
+      "sourceXY": [
+        1551.2,
+        579
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "河内",
+      "sourceXY": [
+        1425.8,
+        616.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "陈留",
+      "sourceXY": [
+        1471,
+        653.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "济阴",
+      "sourceXY": [
+        1536.8,
+        668.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "京兆",
+      "sourceXY": [
+        1200.5,
+        715
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "弘农",
+      "sourceXY": [
+        1291.5,
+        722.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "陈",
+      "sourceXY": [
+        1490,
+        717.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "颍川",
+      "sourceXY": [
+        1411.2,
+        732.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "汉中",
+      "sourceXY": [
+        1040,
+        758.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "南阳",
+      "sourceXY": [
+        1354.2,
+        754.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "汝南",
+      "sourceXY": [
+        1513.8,
+        778.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "南乡",
+      "sourceXY": [
+        1278.8,
+        787.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "襄阳",
+      "sourceXY": [
+        1343.2,
+        828.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "丹阳",
+      "sourceXY": [
+        1734,
+        884.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "庐江",
+      "sourceXY": [
+        1586,
+        881.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "巴西",
+      "sourceXY": [
+        963,
+        891.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "江夏",
+      "sourceXY": [
+        1384.5,
+        892.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "蜀郡",
+      "sourceXY": [
+        827.8,
+        909.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "南郡",
+      "sourceXY": [
+        1370.8,
+        946.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "巴郡",
+      "sourceXY": [
+        991.2,
+        956.8
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "会稽",
+      "sourceXY": [
+        1794,
+        1039.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "长沙",
+      "sourceXY": [
+        1330.2,
+        1071.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "豫章",
+      "sourceXY": [
+        1556.5,
+        1093.2
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "零陵",
+      "sourceXY": [
+        1266.2,
+        1155
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "桂阳",
+      "sourceXY": [
+        1375.2,
+        1254.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "南海",
+      "sourceXY": [
+        1454.5,
+        1358.5
+      ],
+      "kind": "commandery"
+    },
+    {
+      "name": "凉州",
+      "sourceXY": [
+        650,
+        400
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "雍州",
+      "sourceXY": [
+        950,
+        642
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "司隶",
+      "sourceXY": [
+        1300,
+        663
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "并州",
+      "sourceXY": [
+        1300,
+        520
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "冀州",
+      "sourceXY": [
+        1505,
+        555
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "兖州",
+      "sourceXY": [
+        1560,
+        631
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "豫州",
+      "sourceXY": [
+        1517,
+        759
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "徐州",
+      "sourceXY": [
+        1710,
+        746
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "青州",
+      "sourceXY": [
+        1720,
+        510
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "荆州",
+      "sourceXY": [
+        1302,
+        985
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "扬州",
+      "sourceXY": [
+        1625,
+        1050
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "益州",
+      "sourceXY": [
+        940,
+        1125
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "交州",
+      "sourceXY": [
+        1165,
+        1410
+      ],
+      "kind": "province"
+    },
+    {
+      "name": "幽州",
+      "sourceXY": [
+        1835,
+        365
+      ],
+      "kind": "province"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+/* One alternative map mode; it reuses the existing map's full-height canvas. */
+#power-areas,#power-labels,.power-timeline {display:none;}
+body[data-explorer=power] #power-areas,body[data-explorer=power] #power-labels {display:block;}
+body[data-explorer=power] .period-sidebar,body[data-explorer=power] .chapter-sidebar,
+body[data-explorer=power] .episode-player,body[data-explorer=power] .timeline-panel,
+body[data-explorer=power] #territories,body[data-explorer=power] #routes,
+body[data-explorer=power] #event-marker,body[data-explorer=power] #career-markers,
+body[data-explorer=power] #battle-window,body[data-explorer=power] #state-labels,
+body[data-explorer=power] #pending-admin,body[data-explorer=power] #state-fills,
+body[data-explorer=power] #territory-toggle,body[data-explorer=power] #route-toggle {display:none!important;}
+body[data-explorer=power] .map-settings .map-mode {grid-template-columns:1fr 1fr;}
+body[data-explorer=power] #terrain-layer {opacity:.58;}
+body[data-explorer=power] .rivers {opacity:.6;}
+body[data-explorer=power] #state-lines {opacity:.45;}
+body[data-explorer=power] #commandery-lines {opacity:.4;}
+body[data-explorer=power] #state-selection-fills .selected {fill-opacity:.12;}
+#power-areas path {fill-opacity:.6;cursor:pointer;stroke:none;transition:fill-opacity .12s;}
+#power-areas path:hover {fill-opacity:.8;}
+#power-areas path.dimmed {fill-opacity:.12;}
+#power-areas path.selected {fill-opacity:.85;}
+#power-areas path.power-unmapped {fill-opacity:.6;}
+#power-labels text {font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:2px;paint-order:stroke;stroke:#f3edd8;stroke-width:4px;stroke-linejoin:round;}
+#power-labels g {cursor:pointer;}
+#power-labels g:hover text {stroke-width:6px;}
+.power-heading {margin:20px 0 15px;border-bottom:1px solid #b5a47936;padding-bottom:18px;}
+.power-heading h2 {font-family:var(--serif);font-size:58px;font-weight:400;color:#e7d4ad;letter-spacing:2px;line-height:1;}
+.power-heading h2 small {font-family:inherit;font-size:17px;margin-left:9px;color:#a6b5a3;}
+.power-heading>p {font-size:15px;color:#d7d9c6;margin-top:16px;line-height:1.7;}
+.power-method,.power-count-note {font-size:10px;color:#8fa894;line-height:1.9;}
+.power-jumps {display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:18px 0;}
+.power-jumps button {font-size:11px;border:1px solid #adbd8c2c;color:#9fb09d;border-radius:3px;padding:8px 1px;}
+.power-jumps button[aria-pressed=true] {color:#e8cc8e;border-color:#c4a468;background:#bd9f5022;}
+.power-summary {border-left:2px solid #c2a46c;padding:11px 13px;background:#d2b47409;margin-bottom:23px;}
+.power-summary>span {font-size:10px;color:#d2b985;}
+.power-summary p {font-size:12px;line-height:1.95;color:#c2ceba;margin-top:9px;}
+.power-summary>small {display:block;font-size:10px;line-height:1.8;color:#8ca18f;margin-top:9px;}
+.power-section-heading {display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;}
+.power-section-heading h3,.power-region-list h3 {font-size:13px;color:#c8d2bc;font-weight:500;}
+.power-section-heading button {font-size:10px;color:#cfb67e;}
+.power-roster {display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:13px 0 23px;}
+.power-roster button,.power-disputed {display:flex;align-items:center;justify-content:space-between;gap:7px;border:1px solid #acb69025;border-radius:4px;min-height:43px;padding:9px 8px;color:#c0ceba;font-size:11px;text-align:left;}
+.power-roster button[aria-pressed=true] {border-color:#cfb77b;background:#b99d6717;color:#f2dfb8;}
+.power-roster span,.power-owner {display:flex;align-items:center;gap:7px;line-height:1.6;}
+.power-roster i,.power-owner i {display:inline-block;width:11px;height:11px;border-radius:2px;background:var(--power-color);flex-shrink:0;}
+.power-roster small {font-size:10px;color:#8ea38d;}
+.power-roster .power-hatch,.power-hatch,.map-legend i.power-hatch {display:inline-block;width:12px;height:10px;border:1px solid #8c795c;background:repeating-linear-gradient(135deg,#c8b89c 0 3px,#7f6950 3px 5px,#c8b89c 5px 8px);}
+.power-region-detail {padding-top:18px;margin-top:8px;border-top:1px solid #b5a47936;}
+.power-region-detail h3 {font-size:25px;font-family:var(--serif);font-weight:400;letter-spacing:2px;color:#e4d6b4;margin:13px 0;}
+.power-owner {font-size:12px;color:#c6d2bb;}
+.power-focus-note {margin-bottom:18px;}
+.power-region-list {margin:22px 0;}
+.power-region-list button {display:flex;justify-content:space-between;gap:14px;width:100%;padding:11px 2px;text-align:left;border-bottom:1px solid #91a7891e;font-size:12px;color:#bdc9b5;}
+.power-region-list small {font-size:10px;color:#889e8b;}
+.power-evidence {margin:22px 0;color:#93a58f;font-size:10px;line-height:1.9;border-top:1px solid #b5a47925;padding-top:15px;}
+.power-evidence summary {cursor:pointer;color:#c1b187;margin-bottom:12px;}
+.power-evidence p {margin-top:12px;}
+#power-show-legend {pointer-events:auto;font-size:inherit;padding:0;color:#526b50;}
+body[data-explorer=power] .power-timeline:not([hidden]) {display:flex;}
+.power-timeline {height:72px;min-height:72px;align-items:center;gap:12px;padding:8px 18px;background:#e9e6d6;border-top:1px solid #7a896234;color:#49634e;flex-shrink:0;}
+.power-year-display {display:flex;align-items:baseline;gap:5px;min-width:84px;}
+#power-year-label {font-family:var(--serif);font-size:32px;color:#466044;letter-spacing:1px;}
+.power-year-display small {font-size:9px;color:#899075;}
+.power-timeline>button {width:28px;height:36px;padding:0;font-size:26px;color:#748460;flex-shrink:0;}
+.power-range-wrap {flex:1;min-width:0;}
+.power-range-wrap label {display:flex;justify-content:space-between;font-size:9px;color:#738268;gap:12px;white-space:nowrap;}
+#power-year-status {overflow:hidden;text-overflow:ellipsis;font-size:9px;}
+#power-year {display:block;appearance:none;-webkit-appearance:none;width:100%;height:5px;margin:11px 0 9px;background:linear-gradient(90deg,#9c9366,#768d67 43%,#5e82a0 75%,#927bb1);border-radius:5px;cursor:ew-resize;touch-action:none;}
+#power-year::-webkit-slider-thumb {appearance:none;width:17px;height:17px;background:#f8f2db;border:3px solid #697d55;border-radius:50%;box-shadow:0 1px 4px #34493644;}
+#power-year::-moz-range-thumb {width:12px;height:12px;background:#f8f2db;border:3px solid #697d55;border-radius:50%;}
+.power-range-ticks {display:flex;justify-content:space-between;color:#8b937b;font-size:8px;}
+@media(max-width:640px){
+ .main-nav {gap:13px;}
+ .main-nav .nav-item {font-size:9px;letter-spacing:0;}
+ .main-nav #quest-badge {display:none;}
+ .topbar {gap:14px;}
+ .power-timeline {height:64px;min-height:64px;gap:4px;padding:6px 9px;}
+ .power-year-display {min-width:59px;gap:3px;}
+ #power-year-label {font-size:27px;}
+ .power-year-display small {font-size:7px;}
+ .power-timeline>button {width:21px;}
+ .power-range-wrap label,#power-year-status {font-size:8px;}
+ .power-range-ticks {font-size:7px;}
+ body[data-explorer=power] .detail-sidebar {padding-top:27px;}
+ #power-labels text {font-size:16px;letter-spacing:1px;}
+}

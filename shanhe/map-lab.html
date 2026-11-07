@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18322f"><title>山河 · 边界底稿对照</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2318322f'/%3E%3Ctext x='32' y='46' text-anchor='middle' fill='%23e6d4a7' font-size='42'%3E山%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="map-lab.css">
+</head>
+<body>
+  <header><a class="back" href="./index.html">← 故事沙盘</a><div class="brand"><span>山河</span><h1>边界底稿对照</h1></div><span class="epoch">219 年参考</span><button id="about" aria-expanded="false" aria-controls="about-panel">来源与位置核对 <span>↗</span></button></header>
+  <main>
+    <div class="toolbar">
+      <div class="segmented" aria-label="边界对比"><button data-mode="reference" aria-pressed="true">曲线底稿</button><button data-mode="schematic" aria-pressed="false">早期示意</button><button data-mode="difference" aria-pressed="false">新旧对照</button></div>
+      <div class="layer-controls"><button id="modern" aria-pressed="false">现代省界</button><button id="terrain" aria-pressed="true">地形</button><button id="cities" aria-pressed="true">城池</button></div>
+    </div>
+    <section id="map-stage" aria-label="可缩放的边界底稿对照地图">
+      <svg id="lab-map" role="img" aria-label="建安参考边界与当前地图对照"></svg>
+      <div class="map-heading"><span>山川为骨 · 州郡为脉</span><h2 id="view-title">中原与荆州</h2><p id="view-note">曲折边界 × 地形 × 城池约位</p></div>
+      <div class="region-presets" aria-label="查看区域"><button data-view="heartland" aria-pressed="true">中原荆州</button><button data-view="southwest" aria-pressed="false">巴蜀汉中</button><button data-view="han" aria-pressed="false">州郡全貌</button><button data-view="national" aria-pressed="false">全国山河</button></div>
+      <div class="map-tools"><button id="zoom-in" aria-label="放大地图">＋</button><button id="zoom-out" aria-label="缩小地图">−</button><button id="reset" aria-label="复位地图">⌖</button></div>
+      <div class="map-legend" id="legend"></div>
+      <article class="place-card" id="place-card" hidden><button class="close" id="close-place" aria-label="关闭地点详情">×</button><span class="kicker">城池索引 · 地理约位</span><h3 id="place-name"></h3><p id="place-modern"></p><p id="place-context"></p><div id="place-stories"></div></article>
+      <aside id="about-panel" hidden>
+        <button class="close" id="close-about" aria-label="关闭来源说明">×</button><span class="kicker">底稿与进度</span><h3>先看边界，再校年代</h3>
+        <p>候选线稿取自 Esiymbro 的《建安州郡图》。名义年份为 219，原图部分州界采用 220 年后的安排。这里用于检查观感与位置，不代表赤壁时的准确区划。</p>
+        <div class="metrics" id="metrics"></div>
+        <p id="registration-note"></p><button id="control-toggle" aria-pressed="false">显示位置核对点</button>
+        <p>此对照页保留原始线稿及 41 个文字转写，暂不提供郡域高亮。主故事地图已接入全部 133 个郡级标签和 117 个闭合参考范围，可返回故事沙盘探索；14 个缺界、2 个侨置标签仍明确保留未定状态。两页的故事与城池沿用项目索引，并非逐年校名。</p>
+        <p class="attribution">原作与派生线稿：<a href="https://commons.wikimedia.org/wiki/File:Jian%27an_Commanderies.svg" target="_blank" rel="noopener">Esiymbro</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>。本次提取边界、采样、配准并转写部分地名。地形 Mapzen / USGS / NOAA；自然底图 Natural Earth；现代省界 geoBoundaries 2019。<a href="./assets/SOURCES.md" target="_blank">完整来源说明</a></p>
+      </aside>
+      <div id="loading" role="status">正在展开山河…</div>
+    </section>
+    <footer><span id="status" role="status">加载参考边界</span><span class="hint">滚轮缩放 · 拖动地图 · 点击城池</span></footer>
+  </main>
+  <script type="module" src="map-lab.js"></script>
+</body>
+</html>

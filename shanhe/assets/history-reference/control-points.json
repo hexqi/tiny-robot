@@ -1,0 +1,273 @@
+{
+  "note": "人工识读原图城市符号；仅测试与项目现有约位的一致性。临淄符号未能可靠对应，未纳入。",
+  "points": [
+    {
+      "id": "dunhuang",
+      "name": "敦煌",
+      "sourceXY": [
+        267.5,
+        355.5
+      ],
+      "reference": [
+        94.66,
+        40.14
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "guzang",
+      "name": "姑臧",
+      "sourceXY": [
+        753,
+        485
+      ],
+      "reference": [
+        102.64,
+        37.93
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "xiangping",
+      "name": "襄平",
+      "sourceXY": [
+        1982.5,
+        283.5
+      ],
+      "reference": [
+        123.17,
+        41.27
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "ji",
+      "name": "蓟",
+      "sourceXY": [
+        1577,
+        367
+      ],
+      "reference": [
+        116.35,
+        39.9
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "changan",
+      "name": "长安",
+      "sourceXY": [
+        1142.5,
+        686.5
+      ],
+      "reference": [
+        108.9,
+        34.27
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "luoyang",
+      "name": "洛阳",
+      "sourceXY": [
+        1356,
+        674
+      ],
+      "reference": [
+        112.45,
+        34.68
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "nanzheng",
+      "name": "南郑",
+      "sourceXY": [
+        1019.5,
+        774.5
+      ],
+      "reference": [
+        107.03,
+        33.07
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "chengdu",
+      "name": "成都",
+      "sourceXY": [
+        841,
+        918
+      ],
+      "reference": [
+        104.07,
+        30.67
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "jiangzhou",
+      "name": "江州",
+      "sourceXY": [
+        989.5,
+        984.5
+      ],
+      "reference": [
+        106.55,
+        29.57
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "panyu",
+      "name": "番禺",
+      "sourceXY": [
+        1393.5,
+        1368.5
+      ],
+      "reference": [
+        113.27,
+        23.13
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "linxiang",
+      "name": "临湘",
+      "sourceXY": [
+        1376.5,
+        1067.5
+      ],
+      "reference": [
+        112.97,
+        28.2
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "jiangling",
+      "name": "江陵",
+      "sourceXY": [
+        1330,
+        938
+      ],
+      "reference": [
+        112.19,
+        30.35
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "wujun",
+      "name": "吴",
+      "sourceXY": [
+        1829.5,
+        882.5
+      ],
+      "reference": [
+        120.58,
+        31.3
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测",
+      "sourceSymbol": "path4704",
+      "note": "原图 Wu 下方符号；邻近 path4708 为 Wuxi（无锡），已排除误配。"
+    },
+    {
+      "id": "hefei",
+      "name": "合肥",
+      "sourceXY": [
+        1635.5,
+        845.5
+      ],
+      "reference": [
+        117.28,
+        31.86
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "shouchun",
+      "name": "寿春",
+      "sourceXY": [
+        1603,
+        805
+      ],
+      "reference": [
+        116.79,
+        32.58
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "pengcheng",
+      "name": "彭城",
+      "sourceXY": [
+        1626.5,
+        709.5
+      ],
+      "reference": [
+        117.19,
+        34.27
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "jinyang",
+      "name": "晋阳",
+      "sourceXY": [
+        1346,
+        494
+      ],
+      "reference": [
+        112.44,
+        37.71
+      ],
+      "role": "fit",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "ye",
+      "name": "邺",
+      "sourceXY": [
+        1458,
+        582
+      ],
+      "reference": [
+        114.62,
+        36.35
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有地名约位；不是精确古城址实测"
+    },
+    {
+      "id": "jianye",
+      "name": "建业",
+      "sourceXY": [
+        1722,
+        835
+      ],
+      "reference": [
+        118.78,
+        32.05
+      ],
+      "role": "check",
+      "referenceBasis": "项目现有南京区域约位；不是精确古城址实测"
+    }
+  ]
+}

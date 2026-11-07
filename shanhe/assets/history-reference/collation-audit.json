@@ -1,0 +1,1626 @@
+{
+  "stats": {
+    "records": 133,
+    "states": 14,
+    "closed": 117,
+    "open": 14,
+    "emigre": 2,
+    "pendingAreas": 3,
+    "boundaryArcs": 374,
+    "draftingRepairs": 251,
+    "sliversMerged": 67,
+    "sliverAreaSourcePx2": 18.2065
+  },
+  "inputSha256": {
+    "jianan-linework.svg": "576ffdb204a8ea018791a9f0614a38d3a14d2d10564640aba8e75c91dd02146f",
+    "jianan-reference.json": "5c7516cd807cd23fe8576a309a707916ec58e3b67c02a5463a3dd5d21cf4cfb3",
+    "source-coast.json": "8b292c65bc3567a119dfa1f824519589627f826151a92d64f3f9788b2143f1e6",
+    "commandery-review.json": "3eff30c7f10d7b726ef5731d2f356528ab953df7200ac54fc533e41182a440be"
+  },
+  "repairs": [
+    {
+      "sourcePath": "path1220",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 4.572
+    },
+    {
+      "sourcePath": "path1220",
+      "end": -1,
+      "targetPath": "path1248",
+      "distancePx": 1.194
+    },
+    {
+      "sourcePath": "path1222",
+      "end": 0,
+      "targetPath": "path1258",
+      "distancePx": 0.43
+    },
+    {
+      "sourcePath": "path1222",
+      "end": -1,
+      "targetPath": "path10958",
+      "distancePx": 0.45
+    },
+    {
+      "sourcePath": "path1224",
+      "end": 0,
+      "targetPath": "path1388",
+      "distancePx": 2.0
+    },
+    {
+      "sourcePath": "path1224",
+      "end": -1,
+      "targetPath": "path1220",
+      "distancePx": 0.846
+    },
+    {
+      "sourcePath": "path1226",
+      "end": 0,
+      "targetPath": "path10982",
+      "distancePx": 0.519
+    },
+    {
+      "sourcePath": "path1226",
+      "end": -1,
+      "targetPath": "path1230",
+      "distancePx": 1.167
+    },
+    {
+      "sourcePath": "path1228",
+      "end": 0,
+      "targetPath": "path10982",
+      "distancePx": 1.25
+    },
+    {
+      "sourcePath": "path1228",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 0.804
+    },
+    {
+      "sourcePath": "path1230",
+      "end": 0,
+      "targetPath": "path10982",
+      "distancePx": 1.544
+    },
+    {
+      "sourcePath": "path1230",
+      "end": -1,
+      "targetPath": "path1234",
+      "distancePx": 0.52
+    },
+    {
+      "sourcePath": "path1232",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 1.873
+    },
+    {
+      "sourcePath": "path1232",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 4.541
+    },
+    {
+      "sourcePath": "path1234",
+      "end": 0,
+      "targetPath": "path1230",
+      "distancePx": 0.001
+    },
+    {
+      "sourcePath": "path1234",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 2.924
+    },
+    {
+      "sourcePath": "path1236",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1236",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 1.62
+    },
+    {
+      "sourcePath": "path1238",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 9.22
+    },
+    {
+      "sourcePath": "path1238",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 2.393
+    },
+    {
+      "sourcePath": "path1242",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 5.0
+    },
+    {
+      "sourcePath": "path1242",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 7.9
+    },
+    {
+      "sourcePath": "path1244",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 2.461
+    },
+    {
+      "sourcePath": "path1244",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 1.915
+    },
+    {
+      "sourcePath": "path1246",
+      "end": -1,
+      "targetPath": "path1254",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1248",
+      "end": 0,
+      "targetPath": "path1370",
+      "distancePx": 0.669
+    },
+    {
+      "sourcePath": "path1248",
+      "end": -1,
+      "targetPath": "path1386",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1250",
+      "end": 0,
+      "targetPath": "path1220",
+      "distancePx": 2.229
+    },
+    {
+      "sourcePath": "path1250",
+      "end": -1,
+      "targetPath": "path10982",
+      "distancePx": 3.325
+    },
+    {
+      "sourcePath": "path1252",
+      "end": 0,
+      "targetPath": "path1370",
+      "distancePx": 1.441
+    },
+    {
+      "sourcePath": "path1252",
+      "end": -1,
+      "targetPath": "path1256",
+      "distancePx": 0.673
+    },
+    {
+      "sourcePath": "path1254",
+      "end": 0,
+      "targetPath": "path1258",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1254",
+      "end": -1,
+      "targetPath": "path1246",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1256",
+      "end": 0,
+      "targetPath": "path10982",
+      "distancePx": 0.705
+    },
+    {
+      "sourcePath": "path1256",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.949
+    },
+    {
+      "sourcePath": "path1258",
+      "end": 0,
+      "targetPath": "path1254",
+      "distancePx": 0.102
+    },
+    {
+      "sourcePath": "path1258",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.153
+    },
+    {
+      "sourcePath": "path1260",
+      "end": 0,
+      "targetPath": "path10958",
+      "distancePx": 3.294
+    },
+    {
+      "sourcePath": "path1260",
+      "end": -1,
+      "targetPath": "path10960",
+      "distancePx": 2.747
+    },
+    {
+      "sourcePath": "path1262",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 0.709
+    },
+    {
+      "sourcePath": "path1262",
+      "end": -1,
+      "targetPath": "path10960",
+      "distancePx": 2.219
+    },
+    {
+      "sourcePath": "path1264",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 2.322
+    },
+    {
+      "sourcePath": "path1264",
+      "end": -1,
+      "targetPath": "path10960",
+      "distancePx": 1.505
+    },
+    {
+      "sourcePath": "path1266",
+      "end": 0,
+      "targetPath": "path10960",
+      "distancePx": 1.306
+    },
+    {
+      "sourcePath": "path1266",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1268",
+      "end": 0,
+      "targetPath": "path10958",
+      "distancePx": 0.311
+    },
+    {
+      "sourcePath": "path1268",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.715
+    },
+    {
+      "sourcePath": "path1270",
+      "end": 0,
+      "targetPath": "path1268",
+      "distancePx": 0.634
+    },
+    {
+      "sourcePath": "path1270",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.058
+    },
+    {
+      "sourcePath": "path1272",
+      "end": 0,
+      "targetPath": "path1270",
+      "distancePx": 0.187
+    },
+    {
+      "sourcePath": "path1274",
+      "end": 0,
+      "targetPath": "path1270",
+      "distancePx": 0.015
+    },
+    {
+      "sourcePath": "path1274",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 1.355
+    },
+    {
+      "sourcePath": "path1276",
+      "end": 0,
+      "targetPath": "path1272",
+      "distancePx": 1.0
+    },
+    {
+      "sourcePath": "path1276",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 4.044
+    },
+    {
+      "sourcePath": "path1278",
+      "end": 0,
+      "targetPath": "path1272",
+      "distancePx": 0.702
+    },
+    {
+      "sourcePath": "path1278",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.151
+    },
+    {
+      "sourcePath": "path1280",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 0.605
+    },
+    {
+      "sourcePath": "path1280",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 1.205
+    },
+    {
+      "sourcePath": "path1282",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 0.076
+    },
+    {
+      "sourcePath": "path1282",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 1.413
+    },
+    {
+      "sourcePath": "path1284",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 1.1
+    },
+    {
+      "sourcePath": "path1284",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 1.006
+    },
+    {
+      "sourcePath": "path1286",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 1.006
+    },
+    {
+      "sourcePath": "path1286",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.163
+    },
+    {
+      "sourcePath": "path1288",
+      "end": 0,
+      "targetPath": "path1286",
+      "distancePx": 0.027
+    },
+    {
+      "sourcePath": "path1288",
+      "end": -1,
+      "targetPath": "path1286",
+      "distancePx": 0.446
+    },
+    {
+      "sourcePath": "path1290",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 2.65
+    },
+    {
+      "sourcePath": "path1292",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 0.411
+    },
+    {
+      "sourcePath": "path1292",
+      "end": -1,
+      "targetPath": "path1286",
+      "distancePx": 0.513
+    },
+    {
+      "sourcePath": "path1294",
+      "end": 0,
+      "targetPath": "path1308",
+      "distancePx": 1.112
+    },
+    {
+      "sourcePath": "path1294",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.377
+    },
+    {
+      "sourcePath": "path1296",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 0.447
+    },
+    {
+      "sourcePath": "path1296",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 8.0
+    },
+    {
+      "sourcePath": "path1298",
+      "end": 0,
+      "targetPath": "path1296",
+      "distancePx": 0.001
+    },
+    {
+      "sourcePath": "path1298",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.969
+    },
+    {
+      "sourcePath": "path1300",
+      "end": 0,
+      "targetPath": "path1298",
+      "distancePx": 0.003
+    },
+    {
+      "sourcePath": "path1300",
+      "end": -1,
+      "targetPath": "path1302",
+      "distancePx": 0.545
+    },
+    {
+      "sourcePath": "path1302",
+      "end": 0,
+      "targetPath": "path10966",
+      "distancePx": 1.198
+    },
+    {
+      "sourcePath": "path1302",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 8.246
+    },
+    {
+      "sourcePath": "path1304",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 10.237
+    },
+    {
+      "sourcePath": "path1304",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.4
+    },
+    {
+      "sourcePath": "path1306",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 2.114
+    },
+    {
+      "sourcePath": "path1306",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 4.603
+    },
+    {
+      "sourcePath": "path1308",
+      "end": 0,
+      "targetPath": "path1290",
+      "distancePx": 1.218
+    },
+    {
+      "sourcePath": "path1308",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.821
+    },
+    {
+      "sourcePath": "path1310",
+      "end": 0,
+      "targetPath": "path1286",
+      "distancePx": 0.383
+    },
+    {
+      "sourcePath": "path1310",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 1.957
+    },
+    {
+      "sourcePath": "path1312",
+      "end": 0,
+      "targetPath": "path1314",
+      "distancePx": 1.526
+    },
+    {
+      "sourcePath": "path1312",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.887
+    },
+    {
+      "sourcePath": "path1314",
+      "end": 0,
+      "targetPath": "path1286",
+      "distancePx": 0.001
+    },
+    {
+      "sourcePath": "path1314",
+      "end": -1,
+      "targetPath": "path1286",
+      "distancePx": 0.347
+    },
+    {
+      "sourcePath": "path1316",
+      "end": 0,
+      "targetPath": "path1286",
+      "distancePx": 0.181
+    },
+    {
+      "sourcePath": "path1316",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 2.121
+    },
+    {
+      "sourcePath": "path1318",
+      "end": 0,
+      "targetPath": "path1314",
+      "distancePx": 0.002
+    },
+    {
+      "sourcePath": "path1318",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.007
+    },
+    {
+      "sourcePath": "path1320",
+      "end": 0,
+      "targetPath": "path1316",
+      "distancePx": 0.226
+    },
+    {
+      "sourcePath": "path1320",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.416
+    },
+    {
+      "sourcePath": "path1322",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 0.577
+    },
+    {
+      "sourcePath": "path1322",
+      "end": -1,
+      "targetPath": "path1314",
+      "distancePx": 1.325
+    },
+    {
+      "sourcePath": "path1324",
+      "end": 0,
+      "targetPath": "path1350",
+      "distancePx": 1.503
+    },
+    {
+      "sourcePath": "path1324",
+      "end": -1,
+      "targetPath": "path1282",
+      "distancePx": 0.965
+    },
+    {
+      "sourcePath": "path1326",
+      "end": 0,
+      "targetPath": "path1324",
+      "distancePx": 0.017
+    },
+    {
+      "sourcePath": "path1326",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.914
+    },
+    {
+      "sourcePath": "path1328",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 1.662
+    },
+    {
+      "sourcePath": "path1328",
+      "end": -1,
+      "targetPath": "path10980",
+      "distancePx": 1.087
+    },
+    {
+      "sourcePath": "path1330",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.124
+    },
+    {
+      "sourcePath": "path1332",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 16.319
+    },
+    {
+      "sourcePath": "path1332",
+      "end": -1,
+      "targetPath": "path1340",
+      "distancePx": 2.236
+    },
+    {
+      "sourcePath": "path1334",
+      "end": 0,
+      "targetPath": "path1344",
+      "distancePx": 0.202
+    },
+    {
+      "sourcePath": "path1334",
+      "end": -1,
+      "targetPath": "path10968",
+      "distancePx": 3.644
+    },
+    {
+      "sourcePath": "path1336",
+      "end": 0,
+      "targetPath": "path1334",
+      "distancePx": 0.003
+    },
+    {
+      "sourcePath": "path1336",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 4.53
+    },
+    {
+      "sourcePath": "path1338",
+      "end": 0,
+      "targetPath": "path1334",
+      "distancePx": 0.001
+    },
+    {
+      "sourcePath": "path1338",
+      "end": -1,
+      "targetPath": "path1330",
+      "distancePx": 0.363
+    },
+    {
+      "sourcePath": "path1340",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 0.553
+    },
+    {
+      "sourcePath": "path1340",
+      "end": -1,
+      "targetPath": "path1332",
+      "distancePx": 2.236
+    },
+    {
+      "sourcePath": "path1342",
+      "end": 0,
+      "targetPath": "path1346",
+      "distancePx": 0.37
+    },
+    {
+      "sourcePath": "path1342",
+      "end": -1,
+      "targetPath": "path1330",
+      "distancePx": 0.426
+    },
+    {
+      "sourcePath": "path1344",
+      "end": 0,
+      "targetPath": "path1346",
+      "distancePx": 0.316
+    },
+    {
+      "sourcePath": "path1344",
+      "end": -1,
+      "targetPath": "path1340",
+      "distancePx": 0.728
+    },
+    {
+      "sourcePath": "path1346",
+      "end": 0,
+      "targetPath": "path1330",
+      "distancePx": 0.194
+    },
+    {
+      "sourcePath": "path1346",
+      "end": -1,
+      "targetPath": "path1340",
+      "distancePx": 0.099
+    },
+    {
+      "sourcePath": "path1348",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 0.125
+    },
+    {
+      "sourcePath": "path1348",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.448
+    },
+    {
+      "sourcePath": "path1350",
+      "end": 0,
+      "targetPath": "path1352",
+      "distancePx": 0.301
+    },
+    {
+      "sourcePath": "path1350",
+      "end": -1,
+      "targetPath": "path1282",
+      "distancePx": 0.761
+    },
+    {
+      "sourcePath": "path1352",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 1.414
+    },
+    {
+      "sourcePath": "path1352",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.861
+    },
+    {
+      "sourcePath": "path1354",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 1.634
+    },
+    {
+      "sourcePath": "path1354",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 2.0
+    },
+    {
+      "sourcePath": "path1356",
+      "end": 0,
+      "targetPath": "path1354",
+      "distancePx": 0.01
+    },
+    {
+      "sourcePath": "path1356",
+      "end": -1,
+      "targetPath": "path10980",
+      "distancePx": 0.686
+    },
+    {
+      "sourcePath": "path1358",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 3.06
+    },
+    {
+      "sourcePath": "path1358",
+      "end": -1,
+      "targetPath": "path10960",
+      "distancePx": 0.007
+    },
+    {
+      "sourcePath": "path1360",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 8.062
+    },
+    {
+      "sourcePath": "path1360",
+      "end": -1,
+      "targetPath": "path1358",
+      "distancePx": 0.217
+    },
+    {
+      "sourcePath": "path1362",
+      "end": 0,
+      "targetPath": "path1354",
+      "distancePx": 0.997
+    },
+    {
+      "sourcePath": "path1362",
+      "end": -1,
+      "targetPath": "path10980",
+      "distancePx": 2.292
+    },
+    {
+      "sourcePath": "path1364",
+      "end": 0,
+      "targetPath": "path1262",
+      "distancePx": 0.003
+    },
+    {
+      "sourcePath": "path1364",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 14.0
+    },
+    {
+      "sourcePath": "path1366",
+      "end": 0,
+      "targetPath": "path1260",
+      "distancePx": 1.599
+    },
+    {
+      "sourcePath": "path1366",
+      "end": -1,
+      "targetPath": "path1368",
+      "distancePx": 1.833
+    },
+    {
+      "sourcePath": "path1368",
+      "end": 0,
+      "targetPath": "path10960",
+      "distancePx": 0.529
+    },
+    {
+      "sourcePath": "path1368",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 2.16
+    },
+    {
+      "sourcePath": "path1370",
+      "end": 0,
+      "targetPath": "path1250",
+      "distancePx": 4.987
+    },
+    {
+      "sourcePath": "path1370",
+      "end": -1,
+      "targetPath": "path1254",
+      "distancePx": 1.374
+    },
+    {
+      "sourcePath": "path1372",
+      "end": 0,
+      "targetPath": "path10982",
+      "distancePx": 3.852
+    },
+    {
+      "sourcePath": "path1372",
+      "end": -1,
+      "targetPath": "path1220",
+      "distancePx": 2.477
+    },
+    {
+      "sourcePath": "path1374",
+      "end": 0,
+      "targetPath": "path1220",
+      "distancePx": 0.501
+    },
+    {
+      "sourcePath": "path1374",
+      "end": -1,
+      "targetPath": "path1386",
+      "distancePx": 1.23
+    },
+    {
+      "sourcePath": "path1376",
+      "end": 0,
+      "targetPath": "path1392",
+      "distancePx": 1.122
+    },
+    {
+      "sourcePath": "path1376",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 1.391
+    },
+    {
+      "sourcePath": "path1378",
+      "end": 0,
+      "targetPath": "path10984",
+      "distancePx": 3.732
+    },
+    {
+      "sourcePath": "path1380",
+      "end": 0,
+      "targetPath": "path1384",
+      "distancePx": 0.383
+    },
+    {
+      "sourcePath": "path1380",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 2.627
+    },
+    {
+      "sourcePath": "path1382",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 0.86
+    },
+    {
+      "sourcePath": "path1382",
+      "end": -1,
+      "targetPath": "path1384",
+      "distancePx": 1.603
+    },
+    {
+      "sourcePath": "path1384",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 3.59
+    },
+    {
+      "sourcePath": "path1384",
+      "end": -1,
+      "targetPath": "path10956",
+      "distancePx": 0.537
+    },
+    {
+      "sourcePath": "path1386",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 2.392
+    },
+    {
+      "sourcePath": "path1386",
+      "end": -1,
+      "targetPath": "path10958",
+      "distancePx": 0.497
+    },
+    {
+      "sourcePath": "path1388",
+      "end": 0,
+      "targetPath": "path1378",
+      "distancePx": 0.911
+    },
+    {
+      "sourcePath": "path1388",
+      "end": -1,
+      "targetPath": "path10956",
+      "distancePx": 0.983
+    },
+    {
+      "sourcePath": "path1390",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 1.698
+    },
+    {
+      "sourcePath": "path1390",
+      "end": -1,
+      "targetPath": "path1392",
+      "distancePx": 1.056
+    },
+    {
+      "sourcePath": "path1392",
+      "end": 0,
+      "targetPath": "path10970",
+      "distancePx": 0.132
+    },
+    {
+      "sourcePath": "path1392",
+      "end": -1,
+      "targetPath": "path10978",
+      "distancePx": 0.474
+    },
+    {
+      "sourcePath": "path1394",
+      "end": 0,
+      "targetPath": "path1396",
+      "distancePx": 0.184
+    },
+    {
+      "sourcePath": "path1394",
+      "end": -1,
+      "targetPath": "path1416",
+      "distancePx": 0.84
+    },
+    {
+      "sourcePath": "path1396",
+      "end": 0,
+      "targetPath": "path10984",
+      "distancePx": 4.775
+    },
+    {
+      "sourcePath": "path1396",
+      "end": -1,
+      "targetPath": "path10970",
+      "distancePx": 0.499
+    },
+    {
+      "sourcePath": "path1398",
+      "end": 0,
+      "targetPath": "path10972",
+      "distancePx": 0.682
+    },
+    {
+      "sourcePath": "path1398",
+      "end": -1,
+      "targetPath": "path1418",
+      "distancePx": 0.599
+    },
+    {
+      "sourcePath": "path1400",
+      "end": -1,
+      "targetPath": "path10972",
+      "distancePx": 1.835
+    },
+    {
+      "sourcePath": "path1402",
+      "end": -1,
+      "targetPath": "path10972",
+      "distancePx": 0.388
+    },
+    {
+      "sourcePath": "path1404",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 0.058
+    },
+    {
+      "sourcePath": "path1408",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 3.899
+    },
+    {
+      "sourcePath": "path1410",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 3.06
+    },
+    {
+      "sourcePath": "path1414",
+      "end": 0,
+      "targetPath": "path1410",
+      "distancePx": 0.017
+    },
+    {
+      "sourcePath": "path1416",
+      "end": 0,
+      "targetPath": "path10972",
+      "distancePx": 0.002
+    },
+    {
+      "sourcePath": "path1416",
+      "end": -1,
+      "targetPath": "path1418",
+      "distancePx": 1.03
+    },
+    {
+      "sourcePath": "path1418",
+      "end": 0,
+      "targetPath": "path10976",
+      "distancePx": 1.917
+    },
+    {
+      "sourcePath": "path1418",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 0.175
+    },
+    {
+      "sourcePath": "path1420",
+      "end": 0,
+      "targetPath": "path10976",
+      "distancePx": 1.894
+    },
+    {
+      "sourcePath": "path1420",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.858
+    },
+    {
+      "sourcePath": "path1422",
+      "end": 0,
+      "targetPath": "path1394",
+      "distancePx": 0.291
+    },
+    {
+      "sourcePath": "path1422",
+      "end": -1,
+      "targetPath": "path10976",
+      "distancePx": 2.829
+    },
+    {
+      "sourcePath": "path1424",
+      "end": 0,
+      "targetPath": "path1420",
+      "distancePx": 0.022
+    },
+    {
+      "sourcePath": "path1424",
+      "end": -1,
+      "targetPath": "path1456",
+      "distancePx": 0.405
+    },
+    {
+      "sourcePath": "path1426",
+      "end": 0,
+      "targetPath": "path1452",
+      "distancePx": 0.164
+    },
+    {
+      "sourcePath": "path1426",
+      "end": -1,
+      "targetPath": "path1424",
+      "distancePx": 0.561
+    },
+    {
+      "sourcePath": "path1428",
+      "end": 0,
+      "targetPath": "path1396",
+      "distancePx": 0.274
+    },
+    {
+      "sourcePath": "path1428",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.019
+    },
+    {
+      "sourcePath": "path1430",
+      "end": 0,
+      "targetPath": "path1438",
+      "distancePx": 0.04
+    },
+    {
+      "sourcePath": "path1430",
+      "end": -1,
+      "targetPath": "path1442",
+      "distancePx": 0.0
+    },
+    {
+      "sourcePath": "path1432",
+      "end": 0,
+      "targetPath": "path1430",
+      "distancePx": 0.006
+    },
+    {
+      "sourcePath": "path1434",
+      "end": 0,
+      "targetPath": "path1432",
+      "distancePx": 1.933
+    },
+    {
+      "sourcePath": "path1436",
+      "end": -1,
+      "targetPath": "path1444",
+      "distancePx": 1.612
+    },
+    {
+      "sourcePath": "path1438",
+      "end": 0,
+      "targetPath": "path1456",
+      "distancePx": 0.754
+    },
+    {
+      "sourcePath": "path1438",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 2.72
+    },
+    {
+      "sourcePath": "path1440",
+      "end": 0,
+      "targetPath": "path1438",
+      "distancePx": 0.028
+    },
+    {
+      "sourcePath": "path1440",
+      "end": -1,
+      "targetPath": "path1424",
+      "distancePx": 0.17
+    },
+    {
+      "sourcePath": "path1442",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 3.102
+    },
+    {
+      "sourcePath": "path1442",
+      "end": -1,
+      "targetPath": "path1440",
+      "distancePx": 0.181
+    },
+    {
+      "sourcePath": "path1444",
+      "end": -1,
+      "targetPath": "path1436",
+      "distancePx": 2.139
+    },
+    {
+      "sourcePath": "path1446",
+      "end": 0,
+      "targetPath": "path1436",
+      "distancePx": 0.604
+    },
+    {
+      "sourcePath": "path1448",
+      "end": 0,
+      "targetPath": "path1452",
+      "distancePx": 0.417
+    },
+    {
+      "sourcePath": "path1448",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.914
+    },
+    {
+      "sourcePath": "path1450",
+      "end": 0,
+      "targetPath": "path1448",
+      "distancePx": 0.271
+    },
+    {
+      "sourcePath": "path1450",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.647
+    },
+    {
+      "sourcePath": "path1452",
+      "end": 0,
+      "targetPath": "path1440",
+      "distancePx": 1.991
+    },
+    {
+      "sourcePath": "path1452",
+      "end": -1,
+      "targetPath": "path10964",
+      "distancePx": 0.924
+    },
+    {
+      "sourcePath": "path1454",
+      "end": 0,
+      "targetPath": "path1440",
+      "distancePx": 0.661
+    },
+    {
+      "sourcePath": "path1454",
+      "end": -1,
+      "targetPath": "path1442",
+      "distancePx": 2.444
+    },
+    {
+      "sourcePath": "path1456",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 0.627
+    },
+    {
+      "sourcePath": "path1456",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 8.468
+    },
+    {
+      "sourcePath": "path1458",
+      "end": 0,
+      "targetPath": "path1456",
+      "distancePx": 0.003
+    },
+    {
+      "sourcePath": "path1458",
+      "end": -1,
+      "targetPath": "path1438",
+      "distancePx": 0.18
+    },
+    {
+      "sourcePath": "path1460",
+      "end": 0,
+      "targetPath": "path1456",
+      "distancePx": 0.005
+    },
+    {
+      "sourcePath": "path1460",
+      "end": -1,
+      "targetPath": "path10976",
+      "distancePx": 2.254
+    },
+    {
+      "sourcePath": "path10956",
+      "end": 0,
+      "targetPath": "path10984",
+      "distancePx": 4.051
+    },
+    {
+      "sourcePath": "path10956",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 4.235
+    },
+    {
+      "sourcePath": "path10958",
+      "end": 0,
+      "targetPath": "path10978",
+      "distancePx": 2.885
+    },
+    {
+      "sourcePath": "path10960",
+      "end": 0,
+      "targetPath": "path10958",
+      "distancePx": 0.029
+    },
+    {
+      "sourcePath": "path10960",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.371
+    },
+    {
+      "sourcePath": "path10962",
+      "end": 0,
+      "targetPath": "path10980",
+      "distancePx": 1.414
+    },
+    {
+      "sourcePath": "path10962",
+      "end": -1,
+      "targetPath": "path10980",
+      "distancePx": 0.487
+    },
+    {
+      "sourcePath": "path10964",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 2.48
+    },
+    {
+      "sourcePath": "path10964",
+      "end": -1,
+      "targetPath": "path10962",
+      "distancePx": 0.85
+    },
+    {
+      "sourcePath": "path10966",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 3.173
+    },
+    {
+      "sourcePath": "path10968",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 11.371
+    },
+    {
+      "sourcePath": "path10970",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 0.005
+    },
+    {
+      "sourcePath": "path10970",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 2.368
+    },
+    {
+      "sourcePath": "path10972",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 8.289
+    },
+    {
+      "sourcePath": "path10972",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 1.217
+    },
+    {
+      "sourcePath": "path10974",
+      "end": 0,
+      "targetPath": "path10986",
+      "distancePx": 4.532
+    },
+    {
+      "sourcePath": "path10974",
+      "end": -1,
+      "targetPath": "path10984",
+      "distancePx": 4.327
+    },
+    {
+      "sourcePath": "path10976",
+      "end": 0,
+      "targetPath": "path10964",
+      "distancePx": 0.618
+    },
+    {
+      "sourcePath": "path10976",
+      "end": -1,
+      "targetPath": "path10986",
+      "distancePx": 0.561
+    },
+    {
+      "sourcePath": "path10978",
+      "end": 0,
+      "targetPath": "path10962",
+      "distancePx": 0.264
+    },
+    {
+      "sourcePath": "path10978",
+      "end": -1,
+      "targetPath": "path10956",
+      "distancePx": 1.475
+    },
+    {
+      "sourcePath": "path10980",
+      "end": 0,
+      "targetPath": "path10960",
+      "distancePx": 0.003
+    },
+    {
+      "sourcePath": "path10980",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 13.559
+    },
+    {
+      "sourcePath": "path10982",
+      "end": 0,
+      "targetPath": "path10956",
+      "distancePx": 4.864
+    },
+    {
+      "sourcePath": "path10982",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.811
+    },
+    {
+      "sourcePath": "path10984",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 3.983
+    },
+    {
+      "sourcePath": "path10984",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 1.414
+    },
+    {
+      "sourcePath": "path10986",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 5.295
+    },
+    {
+      "sourcePath": "path10986",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 0.318
+    },
+    {
+      "sourcePath": "path10988",
+      "end": 0,
+      "targetPath": "coast-source",
+      "distancePx": 1.414
+    },
+    {
+      "sourcePath": "path10988",
+      "end": -1,
+      "targetPath": "coast-source",
+      "distancePx": 12.728
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "xuantu",
+      "name": "玄菟",
+      "parent": "幽州",
+      "coverage": "emigre-label"
+    },
+    {
+      "id": "xihai",
+      "name": "西海",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "dunhuang-region",
+      "name": "敦煌",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "jiuquan",
+      "name": "酒泉",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "lelang",
+      "name": "乐浪",
+      "parent": "幽州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "zhangye",
+      "name": "张掖",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "xijun",
+      "name": "西郡",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "daifang",
+      "name": "带方",
+      "parent": "幽州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "wuwei",
+      "name": "武威",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "xiping",
+      "name": "西平",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "beidi",
+      "name": "北地（侨）",
+      "parent": "雍州",
+      "coverage": "emigre-label"
+    },
+    {
+      "id": "yuesui",
+      "name": "越巂",
+      "parent": "益州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "zangke",
+      "name": "牂牁",
+      "parent": "益州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "yizhou-jun",
+      "name": "益州郡",
+      "parent": "益州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "yongchang",
+      "name": "永昌",
+      "parent": "益州",
+      "coverage": "open-boundary"
+    },
+    {
+      "id": "zhangye-dependent",
+      "name": "张掖属国",
+      "parent": "凉州",
+      "coverage": "open-boundary"
+    }
+  ]
+}

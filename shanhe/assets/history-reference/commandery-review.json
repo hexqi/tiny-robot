@@ -1,0 +1,3082 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-08",
+  "scope": "对底稿全部 133 个郡级标签逐项识读、归属关联与年代问题记录；不是对各郡边界的史学终审。",
+  "nominalYear": 219,
+  "stateConvention": "原图部分州界取 220 年后安排；按底稿对应关系列州，不直接代表各章故事年。",
+  "sources": [
+    {
+      "id": "houhan-109",
+      "title": "《后汉书》郡国志1",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷109",
+      "purpose": "旧名与东汉州属参照，非建安逐年边界依据"
+    },
+    {
+      "id": "houhan-110",
+      "title": "《后汉书》郡国志2",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷110",
+      "purpose": "旧名与东汉州属参照，非建安逐年边界依据"
+    },
+    {
+      "id": "houhan-111",
+      "title": "《后汉书》郡国志3",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷111",
+      "purpose": "旧名与东汉州属参照，非建安逐年边界依据"
+    },
+    {
+      "id": "houhan-112",
+      "title": "《后汉书》郡国志4",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷112",
+      "purpose": "旧名与东汉州属参照，非建安逐年边界依据"
+    },
+    {
+      "id": "houhan-113",
+      "title": "《后汉书》郡国志5",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷113",
+      "purpose": "旧名与东汉州属参照，非建安逐年边界依据"
+    },
+    {
+      "id": "jin-14",
+      "title": "《晋书》地理志上",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷014",
+      "purpose": "沿革记述；各条时点需分别理解"
+    },
+    {
+      "id": "jin-15",
+      "title": "《晋书》地理志下",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷015",
+      "purpose": "沿革记述；各条时点需分别理解"
+    },
+    {
+      "id": "sanguo-1",
+      "title": "《三国志》武帝纪",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷01",
+      "purpose": "汉末建置与相关年代记述"
+    },
+    {
+      "id": "sanguo-8",
+      "title": "《三国志》刘表等传",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷08",
+      "purpose": "汉末建置与相关年代记述"
+    },
+    {
+      "id": "sanguo-15",
+      "title": "《三国志》刘司马梁张温贾传",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷15",
+      "purpose": "汉末建置与相关年代记述"
+    },
+    {
+      "id": "sanguo-32",
+      "title": "《三国志》先主传",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷32",
+      "purpose": "汉末建置与相关年代记述"
+    },
+    {
+      "id": "sanguo-47",
+      "title": "《三国志》吴主传",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷47",
+      "purpose": "汉末建置与相关年代记述"
+    },
+    {
+      "id": "sanguo-56",
+      "title": "《三国志》朱然等传",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷56",
+      "purpose": "汉末建置与相关年代记述"
+    }
+  ],
+  "records": [
+    {
+      "id": "xuantu",
+      "name": "玄菟",
+      "aliases": [
+        "玄菟郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "侨置标签；原图未给独立辖境，不把辽东的面重复分配给玄菟。",
+      "sourceName": "Xuantu",
+      "sourceXY": [
+        2014.55,
+        241.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "emigre",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xihai",
+      "name": "西海",
+      "aliases": [
+        "西海郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "此处是河西西海，不能与王莽在青海所置的同名建置混为一地。",
+      "sourceName": "Xihai",
+      "sourceXY": [
+        640.09,
+        274.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "shanggu",
+      "name": "上谷",
+      "aliases": [
+        "上谷郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "上谷与渔阳、代分别绘制；此处沿底稿取汉末参考范围，不由现代河北省界推定古郡界。",
+      "sourceName": "Shanggu",
+      "sourceXY": [
+        1530.98,
+        303.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "liaodong",
+      "name": "辽东",
+      "aliases": [
+        "辽东郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "襄平所在的辽东郡。玄菟侨置标签不形成另一个重叠辖区。",
+      "sourceName": "Liaodong",
+      "sourceXY": [
+        1991.07,
+        314.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": "幽州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yuyang",
+      "name": "渔阳",
+      "aliases": [
+        "渔阳郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "渔阳为幽州下的郡级地域，与蓟所在的广阳分列；古郡名不能与今天某一城区的范围直接对应。",
+      "sourceName": "Yuyang",
+      "sourceXY": [
+        1606.55,
+        319.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "liaoxi",
+      "name": "辽西",
+      "aliases": [
+        "辽西郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "柳城、白狼山均为索引约位，不据郡名推定乌桓或曹军实际控制范围。",
+      "sourceName": "Liaoxi",
+      "sourceXY": [
+        1807.99,
+        330.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": "幽州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dunhuang-region",
+      "name": "敦煌",
+      "aliases": [
+        "敦煌郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "敦煌是河西郡级地域；原图这一带的郡界未闭合。敦煌城池可定位，但不能据一个城池坐标补出完整郡域。",
+      "sourceName": "Dunhuang",
+      "sourceXY": [
+        346.21,
+        340.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": "凉州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dai",
+      "name": "代",
+      "aliases": [
+        "代郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "底稿中的代是幽州郡级地域；与并州雁门相邻，不把代郡与后世代州或今天代县直接等同。",
+      "sourceName": "Dai",
+      "sourceXY": [
+        1449.65,
+        347.5
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiuquan",
+      "name": "酒泉",
+      "aliases": [
+        "酒泉郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "酒泉与敦煌、张掖分别列名；河西部分线段未闭合，本条不提供推测性的完整郡域。",
+      "sourceName": "Jiuquan",
+      "sourceXY": [
+        499.47,
+        354.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "youbeiping",
+      "name": "右北平",
+      "aliases": [
+        "右北平郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "右北平按底稿归幽州，名称不能与后来北平城或今天北京市直接等同。",
+      "sourceName": "Youbeiping",
+      "sourceXY": [
+        1660.16,
+        364.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "guangyang",
+      "name": "广阳",
+      "aliases": [
+        "广阳郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "原图以编号 13 标出。蓟县在本图的广阳地域内。",
+      "sourceName": "Guangyang",
+      "sourceXY": [
+        1579.68,
+        383.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": "幽州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhuo",
+      "name": "涿",
+      "aliases": [
+        "涿郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "底稿的涿为郡级地域，与涿县不同层级；不以现代涿州市界替代古郡范围。",
+      "sourceName": "Zhuo",
+      "sourceXY": [
+        1524.97,
+        385.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "lelang",
+      "name": "乐浪",
+      "aliases": [
+        "乐浪郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "与带方之间的原图分界未闭合，保留已绘线段，不补画未有依据的东界。",
+      "sourceName": "Lelang",
+      "sourceXY": [
+        2177.97,
+        392.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yanmen",
+      "name": "雁门",
+      "aliases": [
+        "雁门郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "雁门按底稿归并州。汉末北方边郡的范围与治所曾变化，此轮不将底稿边线倒推至各章故事年代。",
+      "sourceName": "Yanmen",
+      "sourceXY": [
+        1391.58,
+        394.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhongshan",
+      "name": "中山",
+      "aliases": [
+        "中山国",
+        "中山郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "中山在《郡国志》中为国，与郡同级。底稿沿用简称，不表示独立国家或军事势力范围。",
+      "sourceName": "Zhongshan",
+      "sourceXY": [
+        1470.42,
+        406.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhangwu",
+      "name": "章武",
+      "aliases": [
+        "章武郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》总叙列为汉献帝时新增建置；不是黄巾初起时可直接沿用的旧郡。",
+      "sourceName": "Zhangwu",
+      "sourceXY": [
+        1619.24,
+        424.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhangye",
+      "name": "张掖",
+      "aliases": [
+        "张掖郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "张掖郡与张掖属国分列。原图河西分界存在未闭合部分，不将整个待考区归给张掖。",
+      "sourceName": "Zhangye",
+      "sourceXY": [
+        631.96,
+        436.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xinxing",
+      "name": "新兴",
+      "aliases": [
+        "新兴郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》并州条记建安二十年（215）始集塞下荒地立新兴郡；早期章节不可提前视为同期郡名。",
+      "sourceName": "Xinxing",
+      "sourceXY": [
+        1387.07,
+        436.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "boling",
+      "name": "博陵",
+      "aliases": [
+        "博陵郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "原图编号 10。应与安平、中山分别检索。",
+      "sourceName": "Boling",
+      "sourceXY": [
+        1533.68,
+        445.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "changshan",
+      "name": "常山",
+      "aliases": [
+        "常山国",
+        "常山郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "常山在《郡国志》中为国，与郡同级；底稿用简称常山，不以现代县市同名推定边界。",
+      "sourceName": "Changshan",
+      "sourceXY": [
+        1450.43,
+        447.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xijun",
+      "name": "西郡",
+      "aliases": [
+        "西郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "原图写作 Xi。它是河西郡名，不是“西方地区”的方位标签。",
+      "sourceName": "Xi",
+      "sourceXY": [
+        702.16,
+        453.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "daifang",
+      "name": "带方",
+      "aliases": [
+        "带方郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》总叙列为献帝时新增郡；原图东部界线未闭合。",
+      "sourceName": "Daifang",
+      "sourceXY": [
+        2191.78,
+        458.7
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hejian",
+      "name": "河间",
+      "aliases": [
+        "河间国",
+        "河间郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "河间为冀州郡级地域，《郡国志》作国。易京仍按旧框架关联为地域约位，不是郡治名称。",
+      "sourceName": "Hejian",
+      "sourceXY": [
+        1581.57,
+        461.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "bohai",
+      "name": "渤海",
+      "aliases": [
+        "渤海郡",
+        "勃海郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "《郡国志》作勃海。沿海闭合沿用原图现代地形底稿，不代表汉代岸线复原。",
+      "sourceName": "Bohai",
+      "sourceXY": [
+        1646.07,
+        462.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "taiyuan",
+      "name": "太原",
+      "aliases": [
+        "太原郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "晋阳是本项目在太原地域的城池索引；太原郡范围远大于城池本身，不与今天太原市界等同。",
+      "sourceName": "Taiyuan",
+      "sourceXY": [
+        1324.54,
+        466.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": "并州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "leping",
+      "name": "乐平",
+      "aliases": [
+        "乐平郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》并州条记分上党置乐平；不可据此把后来的分郡套到全部早期故事。",
+      "sourceName": "Leping",
+      "sourceXY": [
+        1425.19,
+        485.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "julu-region",
+      "name": "巨鹿",
+      "aliases": [
+        "巨鹿郡",
+        "钜鹿郡",
+        "鉅鹿郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "巨鹿郡的代表点不是整场黄巾战事的唯一地点；下曲阳与上曲阳需区分。",
+      "sourceName": "Julu",
+      "sourceXY": [
+        1506.22,
+        485.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "anping",
+      "name": "安平",
+      "aliases": [
+        "安平国",
+        "安平郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "原图编号 11，勿与今河北安平县等同。",
+      "sourceName": "Anping",
+      "sourceXY": [
+        1545.68,
+        488.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "laoling",
+      "name": "乐陵",
+      "aliases": [
+        "乐陵郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "原图属冀州；《晋书》列献帝新增郡，不沿用现代山东省界推定州属。",
+      "sourceName": "Laoling",
+      "sourceXY": [
+        1659.65,
+        498.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhao",
+      "name": "赵",
+      "aliases": [
+        "赵国",
+        "赵郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "原图编号 9。此处为郡级地域，不是独立政权疆域。",
+      "sourceName": "Zhao",
+      "sourceXY": [
+        1458.04,
+        499.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "pingyuan-region",
+      "name": "平原",
+      "aliases": [
+        "平原郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "sanguo-1"
+      ],
+      "note": "《郡国志》列青州；《武帝纪》记建安十八年割平原等郡益魏。本图按底稿列冀州，早期青州旧属另列，不混为同一时点。",
+      "sourceName": "Pingyuan",
+      "sourceXY": [
+        1618.68,
+        518.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "青州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "lean",
+      "name": "乐安",
+      "aliases": [
+        "乐安国",
+        "乐安郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "乐安与济南、齐、北海分列；底稿归青州，不以现代省县同名或相邻关系替代古政区范围。",
+      "sourceName": "Le'an",
+      "sourceXY": [
+        1701.95,
+        520.7
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "donglai",
+      "name": "东莱",
+      "aliases": [
+        "东莱郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "东莱为青州下郡级地域。沿海闭合参考原图现代地形底稿，不能视为复原汉末海岸。",
+      "sourceName": "Donglai",
+      "sourceXY": [
+        1881.37,
+        524.7
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "wuwei",
+      "name": "武威",
+      "aliases": [
+        "武威郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "姑臧作为武威的城池索引保留；底稿河西郡界未闭合，城池定位不等于已确定武威全境。",
+      "sourceName": "Wuwei",
+      "sourceXY": [
+        792.11,
+        526.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": "凉州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xihe",
+      "name": "西河",
+      "aliases": [
+        "西河郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "汉末边郡内徙与辖域变化明显，本图不以旧郡名外推到整个早期边疆。",
+      "sourceName": "Xihe",
+      "sourceXY": [
+        1278.41,
+        526.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "ganling",
+      "name": "甘陵",
+      "aliases": [
+        "甘陵国",
+        "甘陵郡",
+        "清河国"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "《郡国志》保留清河旧名并叙沿革；检索同时保留清河与甘陵。",
+      "sourceName": "Ganling",
+      "sourceXY": [
+        1547.88,
+        531.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jinan",
+      "name": "济南",
+      "aliases": [
+        "济南国",
+        "济南郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "济南在《郡国志》中为国，与郡同级；与济北、济阴不同，不以今天济南市界代替。",
+      "sourceName": "Jinan",
+      "sourceXY": [
+        1647.55,
+        535.5
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "qi",
+      "name": "齐",
+      "aliases": [
+        "齐国",
+        "齐郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "齐为青州郡级地域，《郡国志》作国；临淄作为城池索引，不表示整个齐地域只有这一地点。",
+      "sourceName": "Qi",
+      "sourceXY": [
+        1709.56,
+        538.7
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": "青州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "shangdang",
+      "name": "上党",
+      "aliases": [
+        "上党郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "上党按底稿归并州；底稿另列乐平，本面不能直接当作分置以前的上党全境。",
+      "sourceName": "Shangdang",
+      "sourceXY": [
+        1351.8,
+        562.1
+      ],
+      "parent": "并州",
+      "oldFrameworkParent": "并州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jincheng",
+      "name": "金城",
+      "aliases": [
+        "金城郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "金城按底稿归凉州；与西平的分置关系需要按具体年代看，不用今天兰州市界替代。",
+      "sourceName": "Jincheng",
+      "sourceXY": [
+        796.44,
+        569.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "wei",
+      "name": "魏",
+      "aliases": [
+        "魏郡"
+      ],
+      "sourceRefs": [
+        "houhan-110",
+        "sanguo-1"
+      ],
+      "note": "魏郡、后来的魏国封域与曹操的实际控制范围不是同一层级。本图郡域不作为曹魏疆域面。",
+      "sourceName": "Wei",
+      "sourceXY": [
+        1478.06,
+        575.7
+      ],
+      "parent": "冀州",
+      "oldFrameworkParent": "冀州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "beihai",
+      "name": "北海",
+      "aliases": [
+        "北海国",
+        "北海郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "北海按底稿归青州；此名为郡级地域，与今日广西北海市并非同一地名范围。",
+      "sourceName": "Beihai",
+      "sourceXY": [
+        1729.38,
+        575.7
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dongjun",
+      "name": "东郡",
+      "aliases": [
+        "东郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "东郡为兖州郡名，不是东方诸郡的泛称。白马、濮阳的地图约位与文字隶属分别保留。",
+      "sourceName": "Dong",
+      "sourceXY": [
+        1550.97,
+        577.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": "兖州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xiping",
+      "name": "西平",
+      "aliases": [
+        "西平郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》总叙列为献帝时新增郡，不能把其轮廓直接当作早期金城郡全境。",
+      "sourceName": "Xiping",
+      "sourceXY": [
+        721.81,
+        578.1
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jibei",
+      "name": "济北",
+      "aliases": [
+        "济北国",
+        "济北郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 1，与济阴、济南分列。",
+      "sourceName": "Jibei",
+      "sourceXY": [
+        1580.04,
+        583.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "chengyang",
+      "name": "城阳",
+      "aliases": [
+        "城阳郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "源图将城阳与北海分绘；这里采用源图的建安前后地域参照，不回推到《郡国志》全部旧界。",
+      "sourceName": "Chengyang",
+      "sourceXY": [
+        1774.07,
+        590.7
+      ],
+      "parent": "青州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "taishan",
+      "name": "泰山",
+      "aliases": [
+        "泰山郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 5；按底稿归兖州，不以今泰安市界代替。",
+      "sourceName": "Taishan",
+      "sourceXY": [
+        1654.04,
+        609.5
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": "兖州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hedong",
+      "name": "河东",
+      "aliases": [
+        "河东郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "河东按底稿列司隶；汉末州属变化与《郡国志》旧框架须分时理解，不以今天黄河河道直接替代全部郡界。",
+      "sourceName": "Hedong",
+      "sourceXY": [
+        1275.18,
+        615.1
+      ],
+      "parent": "司隶",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "anding",
+      "name": "安定",
+      "aliases": [
+        "安定郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "东汉旧属凉州；底稿采用雍州的分州安排，原州属与底稿州属分别记录。",
+      "sourceName": "Anding",
+      "sourceXY": [
+        975.33,
+        616.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "henei",
+      "name": "河内",
+      "aliases": [
+        "河内郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "河内按底稿列司隶，为黄河以北的郡级地域；不是今越南河内，亦非现代省级边界。",
+      "sourceName": "Henei",
+      "sourceXY": [
+        1427.29,
+        616.7
+      ],
+      "parent": "司隶",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dongguan",
+      "name": "东莞",
+      "aliases": [
+        "东莞郡",
+        "东筦郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "位于今山东方向的古郡，不是今天广东东莞市；同名地须按地图位置区分。",
+      "sourceName": "Dongguan",
+      "sourceXY": [
+        1698.68,
+        617.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dongping",
+      "name": "东平",
+      "aliases": [
+        "东平国",
+        "东平郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 2。",
+      "sourceName": "Dongping",
+      "sourceXY": [
+        1587.04,
+        619.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "lu",
+      "name": "鲁",
+      "aliases": [
+        "鲁国",
+        "鲁郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "鲁在《郡国志》中为国，列豫州；不能因位于今山东便改列青州或兖州。",
+      "sourceName": "Lu",
+      "sourceXY": [
+        1635.09,
+        630.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "beidi",
+      "name": "北地（侨）",
+      "aliases": [
+        "北地郡",
+        "北地"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "原图明确标注侨置，未画独立辖境；不能以左冯翊的范围代替北地，也不能恢复为早期塞北全郡。",
+      "sourceName": "Beidi",
+      "sourceXY": [
+        1202.74,
+        632.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "emigre",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "shanyang",
+      "name": "山阳",
+      "aliases": [
+        "山阳郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 3。",
+      "sourceName": "Shanyang",
+      "sourceXY": [
+        1566.04,
+        642.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "chenliu-region",
+      "name": "陈留",
+      "aliases": [
+        "陈留郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "与陈国／陈郡分属不同州。新图使用独立闭合面及共享边，不能互相叠盖。",
+      "sourceName": "Chenliu",
+      "sourceXY": [
+        1470.43,
+        654.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": "兖州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "rencheng",
+      "name": "任城",
+      "aliases": [
+        "任城国",
+        "任城郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 4。",
+      "sourceName": "Rencheng",
+      "sourceXY": [
+        1601.04,
+        654.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hanyang",
+      "name": "汉阳",
+      "aliases": [
+        "汉阳郡",
+        "天水郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "汉阳是东汉对天水的改名；不是今武汉汉阳区。",
+      "sourceName": "Hanyang",
+      "sourceXY": [
+        941.24,
+        655.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "langya",
+      "name": "琅邪",
+      "aliases": [
+        "琅邪国",
+        "琅琊郡",
+        "琅琊国"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "保留“琅邪／琅琊”异写检索。",
+      "sourceName": "Langya",
+      "sourceXY": [
+        1692.72,
+        659.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "fengyi",
+      "name": "左冯翊",
+      "aliases": [
+        "左冯翊",
+        "冯翊郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "东汉三辅之一，旧属司隶；底稿采用雍州分州安排。北地侨置标签不重复占用本面。",
+      "sourceName": "Zuopingyi",
+      "sourceXY": [
+        1151.47,
+        660.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "licheng",
+      "name": "利城",
+      "aliases": [
+        "利城郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "原图编号 7，是淮海方向的利城，不是山东历城。",
+      "sourceName": "Licheng",
+      "sourceXY": [
+        1734.04,
+        666.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiyin",
+      "name": "济阴",
+      "aliases": [
+        "济阴郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "鄄城为索引地点。州域由郡域聚合，避免出现济阴面落在兖州轮廓以外的情况。",
+      "sourceName": "Jiyin",
+      "sourceXY": [
+        1536.88,
+        667.7
+      ],
+      "parent": "兖州",
+      "oldFrameworkParent": "兖州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hanxing",
+      "name": "汉兴",
+      "aliases": [
+        "汉兴郡"
+      ],
+      "sourceRefs": [],
+      "note": "保留底稿的汉兴标签；分合及存续时段尚需专门政区考订，目前未找到足以确定其建置的原典依据。",
+      "sourceName": "Hanxing",
+      "sourceXY": [
+        1019.07,
+        669.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "longxi",
+      "name": "陇西",
+      "aliases": [
+        "陇西郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "陇西在东汉旧框架属凉州；底稿采用雍州分州安排，不能将这一州属提前用于所有故事。",
+      "sourceName": "Longxi",
+      "sourceXY": [
+        862.62,
+        676.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "henan",
+      "name": "河南尹",
+      "aliases": [
+        "河南尹",
+        "河南郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "洛阳、荥阳与官渡所在地域的索引；尹在此为郡级建置。",
+      "sourceName": "Henan",
+      "sourceXY": [
+        1400.45,
+        677.5
+      ],
+      "parent": "司隶",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "pengcheng-region",
+      "name": "彭城",
+      "aliases": [
+        "彭城国",
+        "彭城郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "彭城在《郡国志》中为国，属徐州；彭城县城与郡级地域分别呈现。",
+      "sourceName": "Pengcheng",
+      "sourceXY": [
+        1649.5,
+        695.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": "徐州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "liang",
+      "name": "梁",
+      "aliases": [
+        "梁国",
+        "梁郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "原图编号 8，不能与凉州混淆。",
+      "sourceName": "Liang",
+      "sourceXY": [
+        1563.04,
+        697.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": "豫州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "donghai",
+      "name": "东海",
+      "aliases": [
+        "东海郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "原图编号 6。",
+      "sourceName": "Donghai",
+      "sourceXY": [
+        1714.04,
+        698.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": "徐州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "fufeng",
+      "name": "右扶风",
+      "aliases": [
+        "右扶风",
+        "扶风郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "东汉三辅之一；底稿按雍州分州安排列示，旧司隶隶属保留在说明中。",
+      "sourceName": "Youfufeng",
+      "sourceXY": [
+        1085.25,
+        709.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jingzhao",
+      "name": "京兆尹",
+      "aliases": [
+        "京兆尹",
+        "京兆郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "长安所属郡级地域。底稿采用雍州分州安排，不表示每个故事时点均如此。",
+      "sourceName": "Jingzhao",
+      "sourceXY": [
+        1201.1,
+        714.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "chen",
+      "name": "陈",
+      "aliases": [
+        "陈国",
+        "陈郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "《郡国志》称陈国。地图沿底稿使用简称“陈”，保留郡、国名称检索；名称不表示在每个故事年份具有相同建置。",
+      "sourceName": "Chen",
+      "sourceXY": [
+        1489.63,
+        718.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": "豫州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hongnong",
+      "name": "弘农",
+      "aliases": [
+        "弘农郡"
+      ],
+      "sourceRefs": [
+        "houhan-109"
+      ],
+      "note": "弘农按底稿列司隶，位于联系洛阳与关中方向；不以现代省界或潼关一个关隘的位置代替郡界。",
+      "sourceName": "Hongnong",
+      "sourceXY": [
+        1291.14,
+        721.1
+      ],
+      "parent": "司隶",
+      "oldFrameworkParent": "司隶",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yingchuan",
+      "name": "颍川",
+      "aliases": [
+        "颍川郡",
+        "潁川郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "许县、长社的郡级地域；许不作为独立省级区划。",
+      "sourceName": "Yingchuan",
+      "sourceXY": [
+        1410.92,
+        731.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": "豫州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "wudu",
+      "name": "武都",
+      "aliases": [
+        "武都郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "东汉旧属凉州；底稿按雍州分州安排列示。",
+      "sourceName": "Wudu",
+      "sourceXY": [
+        894.2,
+        740.1
+      ],
+      "parent": "雍州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "qiao",
+      "name": "谯",
+      "aliases": [
+        "谯郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》列为献帝时新增郡；不可直接当作黄巾时期的沛国旧界。",
+      "sourceName": "Qiao",
+      "sourceXY": [
+        1541.66,
+        741.7
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "pei",
+      "name": "沛",
+      "aliases": [
+        "沛国",
+        "沛郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "小沛在战争中常与徐州连述，但本图仍按源图列豫州。",
+      "sourceName": "Pei",
+      "sourceXY": [
+        1606.77,
+        745.7
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": "豫州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "nanyang",
+      "name": "南阳",
+      "aliases": [
+        "南阳郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "jin-15"
+      ],
+      "note": "《晋书》记 208 年分南阳西界置南乡。本面是分郡后的参考范围，不把它当作所有章节的旧南阳全境。",
+      "sourceName": "Nanyang",
+      "sourceXY": [
+        1354.25,
+        753.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hanzhong",
+      "name": "汉中",
+      "aliases": [
+        "汉中郡"
+      ],
+      "sourceRefs": [
+        "houhan-113",
+        "sanguo-1"
+      ],
+      "note": "《武帝纪》记 215 年分安阳、西城置西城郡，并记锡、上庸分置及都尉建置；本面不等于分置前汉中全境。",
+      "sourceName": "Hanzhong",
+      "sourceXY": [
+        1039.74,
+        757.3
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": "益州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xicheng",
+      "name": "西城",
+      "aliases": [
+        "西城郡"
+      ],
+      "sourceRefs": [
+        "sanguo-1"
+      ],
+      "note": "《武帝纪》记建安二十年分汉中安阳、西城置西城郡；本图列荆州参考框架，早期不存在同样的独立郡面。",
+      "sourceName": "Xicheng",
+      "sourceXY": [
+        1161.23,
+        758.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yinping",
+      "name": "阴平",
+      "aliases": [
+        "阴平郡",
+        "阴平道"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "郡与此前属国、道的层级需分辨；底稿绘为独立郡级地域。",
+      "sourceName": "Yinping",
+      "sourceXY": [
+        852.57,
+        768.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "runan",
+      "name": "汝南",
+      "aliases": [
+        "汝南郡"
+      ],
+      "sourceRefs": [
+        "houhan-110"
+      ],
+      "note": "汝南按底稿列豫州，与陈、颍川及弋阳分绘；本面不是后世汝南同名行政区的范围。",
+      "sourceName": "Runan",
+      "sourceXY": [
+        1513.36,
+        777.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": "豫州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "guangling",
+      "name": "广陵",
+      "aliases": [
+        "广陵郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "源图同时标出不同政权设置的治所，不据治所数量切出未经记载的多套郡域。",
+      "sourceName": "Guangling",
+      "sourceXY": [
+        1756.52,
+        780.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xiapi-region",
+      "name": "下邳",
+      "aliases": [
+        "下邳国",
+        "下邳郡"
+      ],
+      "sourceRefs": [
+        "houhan-111"
+      ],
+      "note": "下邳在《郡国志》中为国，列徐州；城池是本项目的地点索引，不表示完整辖县清单。",
+      "sourceName": "Xiapi",
+      "sourceXY": [
+        1692.6,
+        787.7
+      ],
+      "parent": "徐州",
+      "oldFrameworkParent": "徐州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "nanxiang",
+      "name": "南乡",
+      "aliases": [
+        "南乡郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "《晋书》明确记建安十三年（208）分南阳西界立南乡；早期章节需读旧南阳背景。",
+      "sourceName": "Nanxiang",
+      "sourceXY": [
+        1272.18,
+        810.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "wenshan",
+      "name": "汶山",
+      "aliases": [
+        "汶山郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "与蜀郡属国分列；不要将西部山地的留白自动扩成精确界线。",
+      "sourceName": "Wenshan",
+      "sourceXY": [
+        823.35,
+        824.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhangling",
+      "name": "章陵",
+      "aliases": [
+        "章陵郡"
+      ],
+      "sourceRefs": [
+        "sanguo-8"
+      ],
+      "note": "《刘表传》记黄祖子射为章陵太守，证明汉末建置；具体边线沿底稿参照。",
+      "sourceName": "Zhangling",
+      "sourceXY": [
+        1409.27,
+        829.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zitong",
+      "name": "梓潼",
+      "aliases": [
+        "梓潼郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》有关刘备分广汉置梓潼的记述与不同条目的年代安排应对读；本图保留参考范围，不宣称精确逐年生效。",
+      "sourceName": "Zitong",
+      "sourceXY": [
+        913.98,
+        833.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "shangyong",
+      "name": "上庸",
+      "aliases": [
+        "上庸郡"
+      ],
+      "sourceRefs": [
+        "sanguo-1"
+      ],
+      "note": "《武帝纪》在 215 年条记锡、上庸分置及“置都尉”；底稿以郡级范围表达上庸，不据此断言该年各项建置已全部定型。",
+      "sourceName": "Shangyong",
+      "sourceXY": [
+        1192.12,
+        837.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xiangyang-region",
+      "name": "襄阳",
+      "aliases": [
+        "襄阳郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "《晋书》记 208 年分南郡以北立襄阳；赤壁前南郡旧属与后设襄阳郡分别说明。",
+      "sourceName": "Xiangyang",
+      "sourceXY": [
+        1328.24,
+        842.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yiyang-region",
+      "name": "弋阳",
+      "aliases": [
+        "弋阳郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "Yiyang 在此转写“弋阳”，位于淮南方向；不是长沙郡属县益阳。",
+      "sourceName": "Yiyang",
+      "sourceXY": [
+        1493.3,
+        843.5
+      ],
+      "parent": "豫州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "dangqu-region",
+      "name": "宕渠",
+      "aliases": [
+        "宕渠郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》记刘备分置后不久省并巴西，后又有复置。不能把短期建置当作整个三国时期始终存在。",
+      "sourceName": "Dangqu",
+      "sourceXY": [
+        1066.55,
+        852.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "fangling",
+      "name": "房陵",
+      "aliases": [
+        "房陵郡"
+      ],
+      "sourceRefs": [
+        "sanguo-32",
+        "jin-15"
+      ],
+      "note": "郡与房陵县同名；汉末和魏初反复分合，不等同于现代房县边界。",
+      "sourceName": "Fangling",
+      "sourceXY": [
+        1256.75,
+        853.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiujiang",
+      "name": "九江",
+      "aliases": [
+        "九江郡",
+        "淮南郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "jin-15"
+      ],
+      "note": "汉九江主要在淮南，不是今江西九江市；源图同时标注不同阵营治所，不能据此当作单一势力全境。",
+      "sourceName": "Jiujiang",
+      "sourceXY": [
+        1649.32,
+        855.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "lujiang",
+      "name": "庐江",
+      "aliases": [
+        "庐江郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "源图多处治所标注反映对峙，不把同名郡简单按势力重复填色。",
+      "sourceName": "Lujiang",
+      "sourceXY": [
+        1585.82,
+        880.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "danyang",
+      "name": "丹阳",
+      "aliases": [
+        "丹阳郡",
+        "丹楊郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "jin-15"
+      ],
+      "note": "与短期临川和新都分列；今丹阳市不是该郡的等面积替代。",
+      "sourceName": "Danyang",
+      "sourceXY": [
+        1733.73,
+        883.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "guanghan",
+      "name": "广汉",
+      "aliases": [
+        "广汉郡"
+      ],
+      "sourceRefs": [
+        "houhan-113",
+        "jin-14"
+      ],
+      "note": "梓潼分置及雒县所属沿革另列；本面采用底稿的分郡后范围。",
+      "sourceName": "Guanghan",
+      "sourceXY": [
+        908.14,
+        891.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": "益州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiangxia",
+      "name": "江夏",
+      "aliases": [
+        "江夏郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "夏口、樊口是战略地名；源图并列不同阵营治所，不因此制造重叠郡域。",
+      "sourceName": "Jiangxia",
+      "sourceXY": [
+        1385.11,
+        891.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "baxi",
+      "name": "巴西",
+      "aliases": [
+        "巴西郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》记刘璋建安六年（201）分巴置巴西；阆中与江州不再共用一个旧巴郡范围。",
+      "sourceName": "Baxi",
+      "sourceXY": [
+        963.75,
+        893.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "wujun-region",
+      "name": "吴",
+      "aliases": [
+        "吴郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "吴县、吴郡与后来国号分属不同语境。",
+      "sourceName": "Wu",
+      "sourceXY": [
+        1846.25,
+        900.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "qichun",
+      "name": "蕲春",
+      "aliases": [
+        "蕲春郡",
+        "蘄春郡"
+      ],
+      "sourceRefs": [
+        "sanguo-47"
+      ],
+      "note": "《吴主传》记蕲春太守晋宗叛吴，说明此郡的独立建置；本图沿原图列扬州，旧江夏关系另需按时点理解。",
+      "sourceName": "Qichun",
+      "sourceXY": [
+        1517.11,
+        905.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "shu",
+      "name": "蜀郡",
+      "aliases": [
+        "蜀郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "成都所属的蜀郡与整个益州不同层级。",
+      "sourceName": "Shu",
+      "sourceXY": [
+        827.33,
+        910.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": "益州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yidu",
+      "name": "宜都",
+      "aliases": [
+        "宜都郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "《晋书》记刘备分南郡立宜都；早期章节不可把分出的边界当作旧南郡全境。",
+      "sourceName": "Yidu",
+      "sourceXY": [
+        1268.83,
+        915.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "guling",
+      "name": "固陵",
+      "aliases": [
+        "固陵郡",
+        "巴东郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》记建安二十一年（216）置固陵，章武元年（221）改巴东；鱼复、后来的永安在此地域参照中。",
+      "sourceName": "Guling",
+      "sourceXY": [
+        1163.7,
+        921.5
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "linchuan-danyang",
+      "name": "临川（丹阳分置）",
+      "aliases": [
+        "临川郡",
+        "临川"
+      ],
+      "sourceRefs": [
+        "sanguo-56"
+      ],
+      "note": "《朱然传》记孙权分丹阳置临川；裴注明确此郡旋即废止，非后世江西临川。底稿仍列此名，存续时点需保留疑问。",
+      "sourceName": "Linchuan",
+      "sourceXY": [
+        1646.21,
+        946.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "nanjun",
+      "name": "南郡",
+      "aliases": [
+        "南郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "jin-15"
+      ],
+      "note": "底稿已分出襄阳、宜都等，不是 208 年前的完整旧南郡；江陵仍作为重要索引城池。",
+      "sourceName": "Nan",
+      "sourceXY": [
+        1370.17,
+        947.5
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "ba",
+      "name": "巴郡",
+      "aliases": [
+        "巴郡"
+      ],
+      "sourceRefs": [
+        "houhan-113",
+        "jin-14"
+      ],
+      "note": "底稿将巴、巴西、固陵及宕渠等分绘，不能套成早期未分郡的旧巴全境。",
+      "sourceName": "Ba",
+      "sourceXY": [
+        991.45,
+        957.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": "益州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "xindu-yang",
+      "name": "新都（扬州）",
+      "aliases": [
+        "新都郡",
+        "新都",
+        "新安郡"
+      ],
+      "sourceRefs": [
+        "jin-15",
+        "sanguo-47"
+      ],
+      "note": "孙权分丹阳置新都，后改新安；不是益州后来同名的新都郡。",
+      "sourceName": "Xindu",
+      "sourceXY": [
+        1669.88,
+        970.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "qianwei",
+      "name": "犍为",
+      "aliases": [
+        "犍为郡",
+        "犍為郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "犍为按底稿列益州；底稿另列江阳与朱提，本面不能当作这些分置以前的完整旧郡。",
+      "sourceName": "Qianwei",
+      "sourceXY": [
+        852.18,
+        978.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiangyang",
+      "name": "江阳",
+      "aliases": [
+        "江阳郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》记分犍为置江阳；源图采用分置后范围，不能倒推所有早期章节。",
+      "sourceName": "Jiangyang",
+      "sourceXY": [
+        917.14,
+        1005.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "wuling",
+      "name": "武陵",
+      "aliases": [
+        "武陵郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "武陵按底稿列荆州，为郡级地域；沅水流域是阅读其山川关系的参照，不将河流本身当作完整郡界。",
+      "sourceName": "Wuling",
+      "sourceXY": [
+        1246.78,
+        1005.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "poyang",
+      "name": "鄱阳",
+      "aliases": [
+        "鄱阳郡",
+        "鄱陽郡"
+      ],
+      "sourceRefs": [
+        "jin-15",
+        "sanguo-47"
+      ],
+      "note": "孙权分豫章置鄱阳；《吴主传》建安十三年条与《晋书》沿革应对读，不把早期豫章全境压为本图剩余面。",
+      "sourceName": "Poyang",
+      "sourceXY": [
+        1617.16,
+        1038.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "kuaiji",
+      "name": "会稽",
+      "aliases": [
+        "会稽郡",
+        "會稽郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "范围不等于今天绍兴市；海岸沿源底图现代地形处理，未复原古岸线。",
+      "sourceName": "Kuaiji",
+      "sourceXY": [
+        1795.32,
+        1038.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "changsha",
+      "name": "长沙",
+      "aliases": [
+        "长沙郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "长沙按底稿列荆州，临湘、益阳为已收录地点；古郡范围不等于今天长沙市。",
+      "sourceName": "Changsha",
+      "sourceXY": [
+        1330.33,
+        1070.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yuzhang",
+      "name": "豫章",
+      "aliases": [
+        "豫章郡"
+      ],
+      "sourceRefs": [
+        "houhan-112",
+        "jin-15"
+      ],
+      "note": "底稿已分出庐陵、鄱阳等；本图参考面与孙策分郡前的豫章不同。",
+      "sourceName": "Yuzhang",
+      "sourceXY": [
+        1556.57,
+        1092.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": "扬州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhuti",
+      "name": "朱提",
+      "aliases": [
+        "朱提郡",
+        "犍为属国"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "《晋书》将犍为属国改朱提记于章武元年附近，底稿名义 219 已用朱提。保留这一年代差异，不能声称精确 219 切片。",
+      "sourceName": "Zhuti",
+      "sourceXY": [
+        866.24,
+        1104.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    },
+    {
+      "id": "lingling",
+      "name": "零陵",
+      "aliases": [
+        "零陵郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "零陵按底稿列荆州，与桂阳、长沙分绘；不将今日零陵区的范围当作汉末零陵郡。",
+      "sourceName": "Lingling",
+      "sourceXY": [
+        1266.14,
+        1154.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yuesui",
+      "name": "越巂",
+      "aliases": [
+        "越巂郡",
+        "越嶲郡",
+        "越西"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "原图南部与西缘界线留白，保留范围未定状态。",
+      "sourceName": "Yuesui",
+      "sourceXY": [
+        740.57,
+        1160.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zangke",
+      "name": "牂牁",
+      "aliases": [
+        "牂牁郡",
+        "牂柯郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "牂牁按底稿列益州；西南部分边线留白，本条保留名称与已有线段，独立郡域待考。",
+      "sourceName": "Zangke",
+      "sourceXY": [
+        1001.33,
+        1183.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "luling",
+      "name": "庐陵",
+      "aliases": [
+        "庐陵郡",
+        "廬陵郡"
+      ],
+      "sourceRefs": [
+        "jin-15"
+      ],
+      "note": "《晋书》记孙策兴平中分豫章立庐陵；早期豫章旧属与本图分郡后范围分开。",
+      "sourceName": "Luling",
+      "sourceXY": [
+        1494.27,
+        1229.3
+      ],
+      "parent": "扬州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yizhou-jun",
+      "name": "益州郡",
+      "aliases": [
+        "益州郡",
+        "建宁郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "益州郡是州下的一个郡，不能与整个益州等同；后称建宁的沿革须按年代理解。",
+      "sourceName": "Yizhou",
+      "sourceXY": [
+        737.42,
+        1238.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "guiyang",
+      "name": "桂阳",
+      "aliases": [
+        "桂阳郡"
+      ],
+      "sourceRefs": [
+        "houhan-112"
+      ],
+      "note": "不是今天贵州贵阳市。",
+      "sourceName": "Guiyang",
+      "sourceXY": [
+        1375.14,
+        1253.3
+      ],
+      "parent": "荆州",
+      "oldFrameworkParent": "荆州",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yongchang",
+      "name": "永昌",
+      "aliases": [
+        "永昌郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "永昌按底稿列益州；西南部分边线未闭合，不将整片待考区域视为永昌独有范围。",
+      "sourceName": "Yongchang",
+      "sourceXY": [
+        588.93,
+        1283.1
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "yulin",
+      "name": "郁林",
+      "aliases": [
+        "郁林郡",
+        "鬱林郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "郁林在东汉旧框架归交趾刺史部；底稿列交州，与今天玉林市的名称和范围应分开理解。",
+      "sourceName": "Yulin",
+      "sourceXY": [
+        1143.26,
+        1341.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "nanhai",
+      "name": "南海",
+      "aliases": [
+        "南海郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "番禺所属郡级地域，不将海域名称解释为现代行政边界。",
+      "sourceName": "Nanhai",
+      "sourceXY": [
+        1455.95,
+        1359.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": "交趾部",
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "cangwu",
+      "name": "苍梧",
+      "aliases": [
+        "苍梧郡",
+        "蒼梧郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "苍梧在东汉旧框架归交趾刺史部；底稿列交州，不以现代苍梧县界替代古郡范围。",
+      "sourceName": "Cangwu",
+      "sourceXY": [
+        1298.86,
+        1391.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "hepu",
+      "name": "合浦",
+      "aliases": [
+        "合浦郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "本底稿未为离岸岛屿提供完整可提取郡域，不自动外推海岛归属范围。",
+      "sourceName": "Hepu",
+      "sourceXY": [
+        1214.3,
+        1445.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiaozhi",
+      "name": "交趾",
+      "aliases": [
+        "交趾郡",
+        "交阯郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "郡名交趾与上一级交趾刺史部、交州不同层级。",
+      "sourceName": "Jiaozhi",
+      "sourceXY": [
+        975.05,
+        1468.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "jiuzhen",
+      "name": "九真",
+      "aliases": [
+        "九真郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "九真为交州下郡级地域，位于今越南方向；保留底稿覆盖，不按现代中国国界裁切。",
+      "sourceName": "Jiuzhen",
+      "sourceXY": [
+        920.08,
+        1596.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "rinan",
+      "name": "日南",
+      "aliases": [
+        "日南郡"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "日南为交州下郡级地域，位于今越南方向；本图只呈现来源覆盖，不外推未经绘出的辖境。",
+      "sourceName": "Rinan",
+      "sourceXY": [
+        984.64,
+        1713.5
+      ],
+      "parent": "交州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "liaodong-dependent",
+      "name": "辽东属国",
+      "aliases": [
+        "辽东属国"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "属国与辽东郡分别绘制，不能混为同一郡域。",
+      "sourceName": "Liaodong Dependent State",
+      "sourceXY": [
+        1925,
+        265
+      ],
+      "parent": "幽州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "zhangye-dependent",
+      "name": "张掖属国",
+      "aliases": [
+        "张掖属国"
+      ],
+      "sourceRefs": [
+        "houhan-113"
+      ],
+      "note": "与张掖郡分列；底稿边缘未闭合，不自动补齐北界。",
+      "sourceName": "Zhangye Dependent State",
+      "sourceXY": [
+        621,
+        344
+      ],
+      "parent": "凉州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "shu-dependent",
+      "name": "蜀郡属国",
+      "aliases": [
+        "蜀郡属国",
+        "汉嘉郡"
+      ],
+      "sourceRefs": [
+        "houhan-113",
+        "jin-14"
+      ],
+      "note": "与蜀郡、汶山分列；后改汉嘉的沿革不提前替换全部早期地名。",
+      "sourceName": "Shu Dependent State",
+      "sourceXY": [
+        757,
+        970
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": false
+    },
+    {
+      "id": "badong-dependent",
+      "name": "巴东属国",
+      "aliases": [
+        "巴东属国",
+        "涪陵郡"
+      ],
+      "sourceRefs": [
+        "jin-14"
+      ],
+      "note": "底稿将此属国与固陵分列，不将“巴东属国”误写为固陵后来改称的巴东郡。层级与改名时点保留专门核对说明。",
+      "sourceName": "Badong Dependent State",
+      "sourceXY": [
+        1084,
+        1011
+      ],
+      "parent": "益州",
+      "oldFrameworkParent": null,
+      "recordType": "territorial",
+      "review": "source-transcription-and-affiliation",
+      "dating": "mixed-reference-period",
+      "temporalCaution": true
+    }
+  ]
+}
