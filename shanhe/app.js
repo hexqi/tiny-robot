@@ -1,3 +1,4 @@
+import {placeAliases,placeAtYear} from './place-names.js';
 import { powers, powerName, getPowerSnapshot, normalizePowerYear, POWER_MIN_YEAR, POWER_MAX_YEAR } from './power-data.js';
 import { powerDetail, powerAreas, powerLabels, adjacentPowerYear } from './power-view.js';
 import { geography } from './assets/geography.js';
@@ -9,7 +10,8 @@ import { landforms, regionalLandforms, nationalProvinces, cityTerrain, portIds, 
 import { periods, allEvents, allPeople as people, allPlaces as places, allBiographies as biographies, factions, getPeriod, eventLabel, personIdsInPeriod } from './history-world.js';
 const sources={...baseSources,...storySources};
 const $=s=>document.querySelector(s), all=s=>[...document.querySelectorAll(s)];
-const place=id=>places.find(p=>p.id===id);
+const place=id=>placeAtYear(places.find(p=>p.id===id),displayYear());
+const numeral=n=>n<10?'〇一二三四五六七八九'[n]:n<100?(n<20?'':numeral(Math.floor(n/10)))+'十'+(n%10?numeral(n%10):''):String(n);
 const person=id=>{const p=people.find(p=>p.id===id);return p?{...p,...currentPeriod.personContexts?.[id]}:null};
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const point=c=>[(c[0]-108.5)*70,(35.8-c[1])*80];
@@ -43,6 +45,7 @@ const isChibi=()=>currentPeriod.id==='chibi';
 const activePerson=()=>state.view==='people'&&state.focusPerson?person(state.focusPerson):null;
 const activeMilestone=()=>activePerson()?biographies[state.focusPerson].items[state.personNode]:null;
 const isCareer=()=>Boolean(activePerson()&&state.personMode==='career');
+function displayYear(){return isPower()?state.powerYear:isCareer()?Number(activeMilestone()?.when.match(/(?:^|[^\d])(\d{3})(?=[^\d]|$)/)?.[1])||current().year||208:current().year||208}
 const mapPhase=()=>isChibi()&&state.stage===3&&index()<events.findIndex(e=>e.id==='fire-attack')?2:state.stage;
 function setActivePeriod(id){currentPeriod=getPeriod(id);events=currentPeriod.events;stages=currentPeriod.stages;state.period=id;state.focusPerson=null;state.factionFilter='all';state.peopleScope='period'}
 function updateURL(){history.replaceState(null,'',`#period=${currentPeriod.id}&event=${state.event}&view=${state.scope==='national'?'national':'battle'}${isPower()?'&mode=power&year='+state.powerYear:''}`)}
@@ -183,10 +186,10 @@ function renderCities(){
  const national=viewport().w>1900,unit=viewport().w/$('#map-container').clientWidth,scale=unit*.9,ev=current(),boxes=[...adminLabelBoxes],hits=cityHitBoxes(national,unit);
  const offsets={xinye:[29,-12],xiangyang:[-25,18],changban:[-33,-11],hanjin:[20,-13],jiangling:[-25,23],hankou:[-2,-18],fankou:[29,5],chibi:[10,25],wulin:[30,-12],huarong:[-26,24],chaisang:[18,22]};
  const preferred=state.selected?.type==='place'?state.selected.id:isCareer()?activeMilestone()?.place:ev.location;
- $('#cities').innerHTML=[...places].sort((a,b)=>(b.id===preferred)-(a.id===preferred)).map(p=>{
- const [x,y]=point(p.coord),active=!isPower()&&p.id===(state.view==='people'?(isCareer()?activeMilestone()?.place:null):ev.location),selected=state.selected?.type==='place'&&state.selected.id===p.id;
+ $('#cities').innerHTML=[...places].sort((a,b)=>(b.id===preferred)-(a.id===preferred)).map(original=>{
+ const p=place(original.id),[x,y]=point(p.coord),active=!isPower()&&p.id===(state.view==='people'?(isCareer()?activeMilestone()?.place:null):ev.location),selected=state.selected?.type==='place'&&state.selected.id===p.id;
  const shown=cityShown(p,national),initialOffset=national?[0,-19]:(offsets[p.id]||[0,-19]);
- let name=state.mapMode==='modern'?(modernNames[p.id]||p.modern.replace(/^今/,'').split(/[；;（(]/)[0].replace(/一带.*$/,'').replace(/.*?(北京|太原|淄博|南京|西安|洛阳|成都|重庆|广州|武威|敦煌|辽阳|喀什|库车).*/,'$1')):(state.level==='county'&&placeAdmin[p.id]?placeAdmin[p.id][2].split(' · ')[0]:p.name);
+ let name=state.mapMode==='modern'?(modernNames[p.id]||p.modern.replace(/^今/,'').split(/[；;（(]/)[0].replace(/一带.*$/,'').replace(/.*?(北京|太原|淄博|南京|西安|洛阳|成都|重庆|广州|武威|敦煌|辽阳|喀什|库车).*/,'$1')):(state.level==='county'&&placeAdmin[p.id]?(placeAliases(p.id).length?p.name+'县':placeAdmin[p.id][2].split(' · ')[0]):p.name);
  if(isCareer()&&active&&activeMilestone().siteName&&state.mapMode!=='modern')name=activeMilestone().siteName.split('（')[0];
  const modernName=modernNames[p.id]||p.modern.replace(/^今/,'').split(/[；;（(]/)[0].split('一带')[0],compare=state.mapMode==='compare'&&!national;
  const width=Math.max(name.length*12,compare?(modernName.length+2)*8:0),height=compare?29:17;
@@ -204,7 +207,7 @@ function renderStory(){
  const e=current(),i=index(),p=place(e.location),bookmarked=progress.eventBookmarks.includes(e.id),periodIndex=periods.indexOf(currentPeriod),previous=periods[periodIndex-1],next=periods[periodIndex+1];
  const tab=(mode,label)=>`<button id="${mode}-tab" role="tab" aria-controls="story-panel" aria-selected="${state.mode===mode}" data-mode="${mode}">${label}</button>`;
  const references=e.historical?refsMarkup(state.mode==='history'?e.references:(e.novelReferences||e.references)):state.mode==='novel'?`<a class="source-link" href="${e.source}" target="_blank" rel="noopener">《三国演义》第 ${e.chapter} 回 · 阅读原文 ↗</a>`:sourceLinks(historyReferences[e.id]);
- return `<div class="detail-kicker"><span>${e.historical?'史籍故事':'演义故事'} · ${eventLabel(e)}</span><button class="bookmark" id="bookmark" aria-pressed="${bookmarked}" aria-label="${bookmarked?'取消收藏':'收藏当前事件'}">${bookmarked?'◆':'◇'}</button></div><div class="story-hero"><span class="hero-number">${String(i+1).padStart(2,'0')}</span><span class="story-category">${e.kind} / ${stages[e.stage].label}</span><h2>${e.title}</h2><p>${e.summary}</p></div><button class="scene-location" data-detail-place="${p.id}"><span>⌖ ${e.historical?'地点':'场景'} · ${p.name}</span><small>区域约位，非精确现场 ↗</small></button><p class="detail-section-label">${e.historical?'与这件事有关的人物':'谁在这场故事里'}</p>${chips(e.cast)}<div class="detail-tabs" role="tablist" aria-label="叙事口径">${e.historical?tab('history','史籍故事')+tab('novel','演义对照'):tab('novel','演义故事')+tab('history','史实对照')}</div><div id="story-panel" role="tabpanel" aria-labelledby="${state.mode}-tab">${paragraphMarkup(state.mode==='novel'?e.detail:e.history)}${references}</div>${e.historical?`<p class="event-map-note">⌖ ${escape(e.map?.note||'地点为区域约位，连线表示本事件行动方向。')}</p>`:''}<div class="causal-box"><span>为什么这件事重要</span><p>${e.why}</p></div><div class="story-neighbors">${i>0?`<button data-event="${events[i-1].id}"><small>← 前一件事</small>${events[i-1].title}</button>`:previous?`<button data-event="${previous.events.at(-1).id}"><small>← 上一篇结尾</small>${previous.title}</button>`:''}${i<events.length-1?`<button data-event="${events[i+1].id}"><small>后一件事 →</small>${events[i+1].title}</button>`:next?`<button data-event="${next.events[0].id}"><small>继续下一篇 →</small>${next.title} · ${next.years}</button>`:'<span class="end-note">赤壁篇终 · 荆州争夺仍在继续</span>'}</div>`;
+ return `<div class="detail-kicker"><span>${e.historical?'史籍故事':'演义故事'} · ${eventLabel(e)}</span><button class="bookmark" id="bookmark" aria-pressed="${bookmarked}" aria-label="${bookmarked?'取消收藏':'收藏当前事件'}">${bookmarked?'◆':'◇'}</button></div><div class="story-hero"><span class="hero-number">${String(i+1).padStart(2,'0')}</span><span class="story-category">${e.kind} / ${stages[e.stage].label}</span><h2>${e.title}</h2><p>${e.summary}</p></div><button class="scene-location" data-detail-place="${p.id}"><span>⌖ ${e.historical?'地点':'场景'} · ${p.name}</span><small>区域约位，非精确现场 ↗</small></button><p class="detail-section-label">${e.historical?'与这件事有关的人物':'谁在这场故事里'}</p>${chips(e.cast)}<div class="detail-tabs" role="tablist" aria-label="叙事口径">${e.historical?tab('history','史籍故事')+tab('novel','演义对照'):tab('novel','演义故事')+tab('history','史实对照')}</div><div id="story-panel" role="tabpanel" aria-labelledby="${state.mode}-tab">${paragraphMarkup(state.mode==='novel'?e.detail:e.history)}${references}</div>${e.historical?`<p class="event-map-note">⌖ ${escape(e.map?.note||'地点为区域约位，连线表示本事件行动方向。')}</p>`:''}<button class="story-power-link" id="story-power">查看 ${e.year||208} 年末势力版图 <span>↗</span></button><div class="causal-box"><span>为什么这件事重要</span><p>${e.why}</p></div><div class="story-neighbors">${i>0?`<button data-event="${events[i-1].id}"><small>← 前一件事</small>${events[i-1].title}</button>`:previous?`<button data-event="${previous.events.at(-1).id}"><small>← 上一篇结尾</small>${previous.title}</button>`:''}${i<events.length-1?`<button data-event="${events[i+1].id}"><small>后一件事 →</small>${events[i+1].title}</button>`:next?`<button data-event="${next.events[0].id}"><small>继续下一篇 →</small>${next.title} · ${next.years}</button>`:'<span class="end-note">三国篇终 · 280 年，晋灭吴</span>'}</div>`;
 }
 function lifeProse(item){
  return `<p class="life-summary">${escape(item.body)}</p>${item.sections.map(section=>`<section><h3>${escape(section.title)}</h3><p>${escape(section.text)}</p></section>`).join('')}<aside class="life-evidence"><h3>史料与说明</h3>${item.note?`<p>${escape(item.note)}</p>`:''}${item.references.map(ref=>`<a class="story-source" href="${escape(ref.url)}" target="_blank" rel="noopener">${escape(ref.title)} ↗</a>`).join('')}<small>据史籍整理为现代叙述，背景与影响包含阅读解说。</small></aside>`;
@@ -234,7 +237,7 @@ function regionReferences(r){return refsMarkup([r.source,...r.references])}
 function adminChain(p){
  const a=placeAdmin[p.id],r=regionFor(p),old=historicalPlaceAdmin[p.id];
  if(!a)return `<p class="admin-reference">${adminExceptions[p.id]||'隶属关系尚待核对。'}</p>`;
- const changed=old[0]!==a[0]||old[3]!==a[3],geometryNote=locationGeometryNote(p);
+ const changed=old&&(old[0]!==a[0]||old[3]!==a[3]),geometryNote=locationGeometryNote(p);
  return `<p class="detail-section-label">底图参考州属 · 地点按文字关联</p><div class="admin-chain"><button data-state-detail="${a[0]}">${a[0]}</button><b>→</b><button data-region-detail="${r.id}">${a[1]}</button><b>→</b><span>${a[2]}</span></div>${atlasNotice()}${changed?`<p class="detail-body">旧东汉框架：${old[0]} → ${old[1]}。分置与改属见下方沿革；不由底图反推早期故事的辖境。</p>`:''}${geometryNote?`<p class="geometry-note">${geometryNote}</p>`:''}<p class="detail-body">${r.note}</p>${regionReferences(r)}`;
 }
 function renderPlace(id){
@@ -264,6 +267,7 @@ function renderQuest(){
 function renderDetail(){
  if(isPower()){renderPowerDetail();return}
  const s=state.selected;$('#detail').innerHTML=s?.type==='person'?renderPerson(s.id):s?.type==='place'?renderPlace(s.id):s?.type==='region'?renderRegion(s.id):s?.type==='state'?renderState(s.id):state.view==='people'?renderDirectory():state.view==='quest'?renderQuest():renderStory();
+ $('#story-power')?.addEventListener('click',()=>{const year=current().year||208;setView('power');setPowerYear(year)});
  all('#detail [data-event]').forEach(b=>b.addEventListener('click',()=>selectEvent(b.dataset.event)));
  all('#detail [data-person]').forEach(b=>b.addEventListener('click',()=>selectPerson(b.dataset.person)));
  all('#detail [data-detail-place]').forEach(b=>b.addEventListener('click',()=>selectPlace(b.dataset.detailPlace)));
@@ -292,15 +296,17 @@ function render(){
  $('#power-timeline').hidden=!isPower();
  if(isPower()){$('.detail-footer>span:last-child').textContent='山河 · 势力版图';renderMap();renderDetail();return}
  $('#period-list').innerHTML=periods.map(period=>`<button data-period="${period.id}" aria-pressed="${period.id===currentPeriod.id}"><span class="period-number">${String(period.number).padStart(2,'0')}</span><span><strong>${period.title}</strong><small>${period.years} 年 · ${period.events.length} 事</small></span></button>`).join('');
+ const periodList=$('#period-list'),selectedPeriod=periodList.querySelector('[aria-pressed="true"]');
+ if(selectedPeriod){const row=selectedPeriod.getBoundingClientRect(),box=periodList.getBoundingClientRect();periodList.scrollTop+=row.top-box.top-(box.height-row.height)/2}
  all('#period-list [data-period]').forEach(b=>b.addEventListener('click',()=>selectPeriod(b.dataset.period)));
  $('.chapter-heading h1').textContent=state.view==='people'?'人物群像':state.view==='quest'?'探索手记':currentPeriod.title;
  $('.chapter-heading').dataset.years=currentPeriod.years+' 年';
- $('.chapter-heading .volume').textContent='卷'+['一','二','三','四'][currentPeriod.number-1];
+ $('.chapter-heading .volume').textContent='卷'+numeral(currentPeriod.number);
  $('.chapter-subtitle').textContent=currentPeriod.summary;
  $('.chapter-rule>span:first-child').textContent=isChibi()?'演义第 40—50 回':`${currentPeriod.years} 年 · 史籍主线`;
  $('.detail-footer>span:last-child').textContent='山河 · '+currentPeriod.title;
  $('#catalog-current').textContent=`${eventLabel(e)} · ${e.title}`;
- $('#chapters').innerHTML=stages.map((s,i)=>`<button class="chapter-button ${i===state.stage?'active':''}" data-stage="${i}" aria-current="${i===state.stage?'step':'false'}"><span class="chapter-number">${['一','二','三','四'][i]}</span><span><strong>${s.label}</strong></span></button>`).join('');
+ $('#chapters').innerHTML=stages.map((s,i)=>`<button class="chapter-button ${i===state.stage?'active':''}" data-stage="${i}" aria-current="${i===state.stage?'step':'false'}"><span class="chapter-number">${numeral(i+1)}</span><span><strong>${s.label}</strong></span></button>`).join('');
  all('[data-stage]').forEach(b=>b.addEventListener('click',()=>setStage(Number(b.dataset.stage))));
  $('#event-list').innerHTML=phaseEvents.map(e=>`<button class="episode-item ${e.id===state.event?'active':''}" data-event="${e.id}" aria-current="${e.id===state.event?'step':'false'}"><span class="episode-dot">${progress.eventsSeen.includes(e.id)?'·':''}</span><span><strong>${e.title}</strong><small>${eventLabel(e)} · ${e.kind}</small></span>${e.id===state.event?'<b>›</b>':''}</button>`).join('');
  all('#event-list [data-event]').forEach(b=>b.addEventListener('click',()=>selectEvent(b.dataset.event,false,false)));
@@ -478,7 +484,7 @@ new ResizeObserver(()=>{if(state.scope==='national'&&camera.zoom<.35)camera=nati
 const entries=[
  ...periods.map(p=>({type:'period',id:p.id,title:p.title,sub:`历史第 ${p.number} 篇 · ${p.years} 年`,search:p.title+p.years+p.summary})),
  ...people.map(p=>({type:'person',id:p.id,title:p.name,sub:`人物 · ${p.zi}`,search:p.name+p.zi})),
- ...places.map(p=>({type:'place',id:p.id,title:p.name,sub:p.modern,search:p.name+p.modern+(placeAdmin[p.id]?.join('')||p.region)})),
+ ...places.map(p=>({type:'place',id:p.id,title:p.name,sub:p.modern,search:p.name+placeAliases(p.id).join('')+p.modern+(placeAdmin[p.id]?.join('')||p.region)})),
  ...allEvents.map(e=>({type:'event',id:e.id,title:e.title,sub:`${getPeriod(e.periodId).title} · ${eventLabel(e)}`,search:e.title+e.summary+(e.historical?e.history:'')})),
  ...states.map(s=>({type:'state',id:s.name,title:s.name,sub:'建安底稿州属 · 非逐年复原',search:s.name+(s.name==='交州'?'交趾部':'')})),
  ...ancientRegions.map(r=>({type:'region',id:r.id,title:r.name,sub:`${r.parent} · ${r.geometryStatus}`,search:r.name+r.parent+r.aliases.join('')})),
@@ -486,8 +492,9 @@ const entries=[
 ];
 function renderSearch(){
  const q=$('#search-input').value.trim().toLowerCase(),suggested=isChibi()?['borrow-arrows','kanze','nanjun','chibi','chain-plan','guanyu-mercy']:[currentPeriod.id,events[0].id,events.at(-1).id,...events[0].cast.slice(0,2)];
- const matches=(q?entries.filter(e=>e.search.toLowerCase().includes(q)):entries.filter(e=>suggested.includes(e.id))).slice(0,30);
- $('#search-results').innerHTML=matches.length?matches.map(e=>`<button class="search-result" data-result="${escape(e.type+':'+e.id)}"><span>${escape(e.title)}</span><small>${escape(e.sub)} ↗</small></button>`).join(''):'<p class="detail-body">已收录内容里还没有找到它。试试人物姓名、字、古今地名或事件。</p>';
+ const score=e=>{const names=[e.title,...(e.type==='place'?[place(e.id).name,...placeAliases(e.id)]:[])].map(name=>name.toLowerCase());return names.includes(q)?0:names.some(name=>name.startsWith(q))?1:names.some(name=>name.includes(q))?2:3};
+ const matches=(q?entries.filter(e=>e.search.toLowerCase().includes(q)).sort((a,b)=>score(a)-score(b)):entries.filter(e=>suggested.includes(e.id))).slice(0,30);
+ $('#search-results').innerHTML=matches.length?matches.map(e=>`<button class="search-result" data-result="${escape(e.type+':'+e.id)}"><span>${escape(e.type==='place'?place(e.id).name:e.title)}</span><small>${escape(e.sub)} ↗</small></button>`).join(''):'<p class="detail-body">已收录内容里还没有找到它。试试人物姓名、字、古今地名或事件。</p>';
  all('[data-result]').forEach(b=>b.addEventListener('click',()=>{
   const [type,id]=b.dataset.result.split(':');$('#search-dialog').close();
   if(type==='person')selectPerson(id);else if(type==='place')selectPlace(id);else if(type==='event')selectEvent(id);else if(type==='period')selectPeriod(id);

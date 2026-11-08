@@ -1,4 +1,5 @@
 // Locations are approximate modern correspondences; symbols do not reconstruct city walls.
+import {laterFieldIds,laterPortIds} from './period-extensions.js';
 const city=(id,name,modern,coord,region,desc,terrain,rank=2)=>({id,name,modern,coord,region,desc,terrain,rank,isAtlas:true});
 export const atlasCities=[
  city('guandu','官渡','今河南中牟一带',[114.0,34.9],'中原','曹操与袁绍决战的区域，点位为古战场约位。','黄河南侧 · 中原平原',3),
@@ -75,5 +76,5 @@ export const nationalProvinces=[
  ['香港',[114.35,22.35]],['澳门',[113.45,22.15]],
 ];
 export const cityTerrain={xuchang:'颍川平原 · 中原腹地',wancheng:'南阳盆地 · 荆襄门户',xinye:'南阳盆地南缘',xiangyang:'汉水谷地 · 荆襄通道',changban:'荆山余脉与平原交接处',jiangling:'江汉平原 · 长江北侧',hankou:'长江与汉水交汇',fankou:'樊水入江处 · 长江沿岸',chibi:'长江中游 · 江南丘陵北缘',chaisang:'长江沿岸 · 庐山以北',hefei:'江淮之间 · 巢湖北侧',wujun:'太湖平原 · 江南水网',hanjin:'汉水渡口 · 江汉平原',huarong:'江汉平原南部 · 古道约位',wulin:'长江北岸 · 乌林一带'};
-export const portIds=['hankou','fankou','hanjin'];
-export const fieldIds=['chibi','changban','huarong','wulin','guandu','wuzhang','baima'];
+export const portIds=['hankou','fankou','hanjin',...laterPortIds];
+export const fieldIds=['chibi','changban','huarong','wulin','guandu','wuzhang','baima',...laterFieldIds];

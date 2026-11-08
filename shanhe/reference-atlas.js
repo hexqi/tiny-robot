@@ -1,8 +1,9 @@
 import { collatedAtlas } from './assets/history-reference/collated-atlas.js';
-import { placeAdmin as oldPlaceAdmin, adminExceptions } from './atlas-data.js';
+import { placeAdmin as oldPlaceAdmin, adminExceptions as oldAdminExceptions } from './atlas-data.js';
+import { laterPlaceAdmin, laterAdminExceptions } from './period-extensions.js';
 
 // All chapters share this reference map. Its dates are independent of story dates.
-export { adminExceptions };
+export const adminExceptions={...oldAdminExceptions,...laterAdminExceptions};
 export const atlasMetadata = collatedAtlas;
 export const ancientSources = [
   { title: 'Esiymbro · 建安州郡参考图 · CC BY-SA 4.0', url: collatedAtlas.source.url },
@@ -29,6 +30,12 @@ export const placeAdmin = Object.fromEntries(Object.entries(oldPlaceAdmin).map((
   if (!r) throw new Error(`Missing reference commandery for ${id}`);
   return [id, [r.parent, r.name, old[2].replace(' · 旧巴郡框架', ''), r.id]];
 }));
+for(const [id,assignment] of Object.entries(laterPlaceAdmin)){
+ if(!assignment)continue;
+ const region=ancientRegions.find(r=>r.id===assignment[3]);
+ if(!region)throw new Error(`Missing reference commandery for ${id}`);
+ placeAdmin[id]=[region.parent,region.name,assignment[2],region.id];
+}
 
 function inRing([x, y], ring) {
   let inside = false;

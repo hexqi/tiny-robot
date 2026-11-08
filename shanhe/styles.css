@@ -179,3 +179,9 @@ body:not([data-period=chibi]) .map-title{max-width:calc(100% - 85px)}body:not([d
 #state-lines path.selected{stroke:#8d5c27;stroke-width:2.5;opacity:1}
 #commandery-lines path.selected{stroke:#875321;stroke-width:2;opacity:1}
 .map-legend i.selection-key{width:12px;height:9px;background:#c99c463d;border:1px solid #87532180}
+
+/* Eight chapters stay within the reading column without pushing down the map. */
+.period-list{grid-auto-rows:60px;max-height:127px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#7e936d55 transparent;padding-right:3px;}
+.story-power-link{display:flex;justify-content:space-between;gap:12px;width:100%;margin:20px 0;padding:12px;border:1px solid #bca47040;border-radius:4px;color:#d6be89;font-size:12px;text-align:left;background:#ba9e620b;}
+.story-power-link:hover{background:#ba9e621a;}
+.episode-player .episode-caption strong,.episode-player .episode-caption span{max-width:100%;overflow:hidden;text-overflow:ellipsis;}
