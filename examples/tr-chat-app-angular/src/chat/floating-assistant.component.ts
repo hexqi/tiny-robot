@@ -6,10 +6,12 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   DestroyRef,
   ElementRef,
+  EventEmitter,
   HostListener,
   inject,
   Input,
   NgZone,
+  Output,
   TemplateRef,
   ViewChild,
   ViewEncapsulation,
@@ -23,10 +25,11 @@ import type {
   ChatUIOptions,
   LayoutFloatingState,
 } from '@opentiny/tiny-robot-chat'
-import type { ChatRenderers } from '@opentiny/tiny-robot-chat/experimental'
+import type { ChatRenderers, TrChatHTMLElement } from '@opentiny/tiny-robot-chat/experimental'
 import { bubbleRenderers } from './markdown'
 import { copyReply, replyText } from './reply-actions'
 import { fromTemplate } from './template-renderer'
+import type { QuickAssistContextSummary } from './quick-assist-bridge'
 
 @Component({
   selector: 'app-floating-assistant',
@@ -39,10 +42,25 @@ import { fromTemplate } from './template-renderer'
 export class FloatingAssistantComponent {
   @Input({ required: true }) runtime!: ChatRuntime
   @Input({ required: true }) ui!: ChatUIOptions
+  private _assistContext: QuickAssistContextSummary | null = null
+  @Input()
+  get assistContext(): QuickAssistContextSummary | null {
+    return this._assistContext
+  }
+  set assistContext(value: QuickAssistContextSummary | null) {
+    this._assistContext = value
+    this.syncRenderers()
+  }
+  @Output() clearAssistContext = new EventEmitter<void>()
+  @ViewChild('chatEl', { static: true }) chatEl!: ElementRef<TrChatHTMLElement>
   @ViewChild('windowHeader', { static: true }) windowHeader!: TemplateRef<{ $implicit: ChatHeaderSlotProps }>
   @ViewChild('replyActions', { static: true }) replyActions!: TemplateRef<{ $implicit: ChatBubbleSlotProps }>
+  @ViewChild('contextBar', { static: true }) contextBar!: TemplateRef<{ $implicit: unknown }>
   @ViewChild('historyPanel', { static: true }) historyPanel!: TemplateRef<object>
   @ViewChild('launcher', { static: true }) launcher!: ElementRef<HTMLButtonElement>
+  private readonly detector = inject(ChangeDetectorRef)
+  private readonly zone = inject(NgZone)
+  private buildBaseRenderers?: () => ChatRenderers
   readonly bubbleRenderers = bubbleRenderers
   readonly replyText = replyText
   readonly copyReply = copyReply
@@ -96,13 +114,13 @@ export class FloatingAssistantComponent {
     },
   }))
   constructor() {
-    const owner = { application: inject(ApplicationRef), zone: inject(NgZone) }
-    const detector = inject(ChangeDetectorRef)
+    const owner = { application: inject(ApplicationRef), zone: this.zone }
     const destroy = inject(DestroyRef)
     afterNextRender(() =>
       owner.zone.run(() => {
         const actions = fromTemplate(this.replyActions, owner)
         const header = fromTemplate(this.windowHeader, owner)
+        const contextRenderer = fromTemplate(this.contextBar, owner)
         const historyView = this.historyPanel.createEmbeddedView({})
         const portal = document.createElement('div')
         portal.style.display = 'contents'
@@ -118,7 +136,7 @@ export class FloatingAssistantComponent {
           }
           portal.remove()
         })
-        this.renderers = {
+        this.buildBaseRenderers = () => ({
           'layout-header': (scope, lifecycle) => {
             if (destroy.destroyed) return null
             this.headerScope = scope
@@ -126,11 +144,34 @@ export class FloatingAssistantComponent {
             this.placeHistory()
             return header(scope, lifecycle)
           },
+          ...(this._assistContext
+            ? {
+                'composer-before': (scope, lifecycle) =>
+                  destroy.destroyed || !this._assistContext ? null : contextRenderer(scope, lifecycle),
+              }
+            : {}),
           'bubble-after': (scope, lifecycle) => (replyText(scope) ? actions(scope, lifecycle) : null),
-        }
-        detector.detectChanges()
+        })
+        this.syncRenderers()
       }),
     )
+  }
+  private syncRenderers() {
+    if (!this.buildBaseRenderers) return
+    this.renderers = this.buildBaseRenderers()
+    this.detector.detectChanges()
+  }
+  openPanel(): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this.zone.run(() => {
+        this.open.set(true)
+        this.detector.detectChanges()
+      })
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+    })
+  }
+  getChatElement(): TrChatHTMLElement | null {
+    return this.chatEl?.nativeElement ?? null
   }
   updateFloatingState(event: Event) {
     this.floatingState = (event as CustomEvent<[LayoutFloatingState]>).detail[0]

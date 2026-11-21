@@ -10,9 +10,11 @@
 pnpm install
 ```
 
-## 2 填写 `.env`
+## 2 填写 `.env`（可选）
 
-首次启动时，将本项目的 `.env.example` 复制为 `.env`；已有 `.env` 时直接编辑。至少配置一个服务的密钥，或填写不需要前端密钥的代理地址。例如：
+未配置 `.env` 时，启动后会自动进入**本地演示模式**（零密钥本地流式模拟回复），可直接体验完整聊天及工作台的 QuickAssist 划词与卡片联动。
+
+如需对接真实大模型，将本项目的 `.env.example` 复制为 `.env`；已有 `.env` 时直接编辑。至少配置一个服务的密钥，或填写不需要前端密钥的代理地址。例如：
 
 ```env
 VITE_ALIYUN_DASHSCOPE_KEY=你的开发密钥
@@ -52,7 +54,7 @@ Angular CLI 通过 `scripts/env.mjs` 在启动、类型检查和构建前读取 
 
 项目提供两个独立页面：`/chat` 是完整聊天应用，`/workspace` 是带浮窗助手的业务工作台，根路径默认展示完整聊天。顶部链接用于访问对应页面。每个页面由应用创建 Runtime，卸载时统一释放。
 
-工作台右下角显示圆形 AI 头像。打开后窗口头部提供新建会话、历史、全屏和关闭操作。历史面板支持搜索、切换、重命名和删除。浮窗支持拖动、缩放，全屏后按 Escape 或点击恢复按钮返回原位置和尺寸；历史面板打开时 Escape 先关闭面板。关闭再打开会保留当前会话与草稿。
+工作台集成 **QuickAssist（`@opentiny/tiny-robot/vanilla`）** 与右下角圆形 AI 头像浮窗（`tr-chat`）：支持业务正文划词提问（自动隔离 `tr-chat` 与敏感区域、脱敏租户 ID）、指标卡片点击「问 AI」主动调用 `activate()`、提交后自动展开浮窗并在 `sender-header` 展示引用上下文条。打开后窗口头部提供新建会话、历史、全屏和关闭操作。历史面板支持搜索、切换、重命名和删除。浮窗支持拖动、缩放，全屏后按 Escape 或点击恢复按钮返回原位置和尺寸；历史面板打开时 Escape 先关闭面板。关闭再打开会保留当前会话与草稿。
 
 在已有应用中接入时，先安装 `markdown-it`、`dompurify` 和开发依赖 `@types/markdown-it`，将本项目 `src/chat/` 中的 `floating-assistant.component.ts`、`floating-assistant.component.html`、`floating-assistant.css`、`markdown.ts`、`markdown.css`、`reply-actions.ts`、`template-renderer.ts` 放入宿主的 `src/chat/`。在业务页面挂载 `FloatingAssistantComponent`，传入所属应用创建的 `runtime`、`ui`。组件自动加载自己的样式，样式作用于助手区域。创建 Runtime 的组件销毁时调用 `dispose()`。
 

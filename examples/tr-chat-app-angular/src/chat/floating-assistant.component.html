@@ -1,5 +1,6 @@
 <section class="floating-assistant-host" [hidden]="!open()" aria-label="AI 助手">
   <tr-chat
+    #chatEl
     id="floating-chat"
     [runtime]="runtime"
     [ui]="chatUI()"
@@ -68,6 +69,26 @@
     </div>
   </header>
 </ng-template>
+<ng-template #contextBar>
+  @if (assistContext; as ctx) {
+    <div class="assistant-context-bar" role="status">
+      <div class="assistant-context-meta">
+        <span class="assistant-context-tag">QuickAssist 引用</span>
+        <span class="assistant-context-text" [title]="ctx.selectedText">{{ ctx.selectedText }}</span>
+        <span class="assistant-context-tenant">租户：{{ ctx.sanitizedTenant }}</span>
+      </div>
+      <button
+        type="button"
+        class="assistant-context-clear"
+        aria-label="清除引用上下文"
+        (click)="clearAssistContext.emit()"
+      >
+        清除
+      </button>
+    </div>
+  }
+</ng-template>
+
 <ng-template #replyActions let-scope>
   <div class="reply-actions">
     <button

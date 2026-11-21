@@ -20,7 +20,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/@opentiny/tiny-robot-chat/dist/web-component.css", "src/style.css"],
+            "styles": [
+              "node_modules/@opentiny/tiny-robot-chat/dist/web-component.css",
+              "node_modules/@opentiny/tiny-robot/dist/vanilla/style.css",
+              "src/style.css"
+            ],
             "loader": {
               ".jpg": "file"
             }

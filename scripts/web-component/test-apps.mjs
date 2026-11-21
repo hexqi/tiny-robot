@@ -13,7 +13,7 @@ const env = {
   VITE_DEEPSEEK_API_URL: 'http://127.0.0.1:4550/deepseek',
   VITE_DEEPSEEK_API_KEY: 'local-test-key',
 }
-for (const host of ['angular', 'react']) {
+for (const host of ['js', 'angular', 'react']) {
   const project = path.join(testProjectsRoot, host)
   run('pnpm', ['type-check'], project)
   run('pnpm', [host === 'angular' ? 'build:test' : 'build'], project, { ...env, NG_BUILD_MAX_WORKERS: '2' })

@@ -407,3 +407,95 @@ test('宿主 Markdown 渲染助手正文，底部复制原文并可从复制失�
   await expect(chat.locator('[data-role="user"] strong').getByText('保留用户 Markdown', { exact: true })).toBeVisible()
   await expect(chat.locator('.assistant-markdown').last()).toContainText('这是本地协议验证回复。')
 })
+
+test('工作台划词触发 QuickAssist，自动脱敏并驱动 tr-chat 浮窗发送与展示引用条', async ({ page }) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.goto('/workspace')
+
+  // 正向划选业务正文中的「竞价计费」
+  const paragraph = page.locator('[data-qa-scope] p', { hasText: '竞价计费' }).first()
+  await expect(paragraph).toBeVisible()
+  await paragraph.evaluate((node) => {
+    const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT)
+    let textNode: Text | null = null
+    while ((textNode = walker.nextNode() as Text | null)) {
+      const idx = textNode.data.indexOf('竞价计费')
+      if (idx >= 0) {
+        const range = document.createRange()
+        range.setStart(textNode, idx)
+        range.setEnd(textNode, idx + '竞价计费'.length)
+        const selection = window.getSelection()!
+        selection.removeAllRanges()
+        selection.addRange(range)
+        document.dispatchEvent(new Event('selectionchange'))
+        node.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }))
+        break
+      }
+    }
+  })
+
+  const trigger = page.locator('.tr-quick-assist__trigger')
+  await expect(trigger).toBeVisible()
+  await trigger.click()
+
+  const suggestion = page.locator('.tr-quick-assist__suggestion').first()
+  await expect(suggestion).toBeVisible()
+  await suggestion.click()
+
+  const surface = page.locator('.tr-layout--floating')
+  await expect(surface).toBeVisible()
+  await expect(surface.locator('.assistant-context-bar')).toContainText('竞价计费')
+  await expect(surface.locator('.assistant-context-bar')).toContainText('[已脱敏]')
+  await expect(surface).toContainText('这是本地协议验证回复。')
+  await expect(surface).not.toContainText('tenant-demo-4812')
+
+  await surface.getByRole('button', { name: '清除引用上下文', exact: true }).click()
+  await expect(surface.locator('.assistant-context-bar')).toHaveCount(0)
+  expect(errors).toEqual([])
+})
+
+test('工作台指标卡片主动激活 QuickAssist，且敏感区与 tr-chat 内部划词不误触', async ({ page }) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.goto('/workspace')
+
+  // 1. 敏感区划词不应触发 QuickAssist
+  const sensitive = page.locator('[data-sensitive="true"]').first()
+  await sensitive.evaluate((node) => {
+    const range = document.createRange()
+    range.selectNodeContents(node)
+    const selection = window.getSelection()!
+    selection.removeAllRanges()
+    selection.addRange(range)
+    document.dispatchEvent(new Event('selectionchange'))
+    node.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }))
+  })
+  await expect(page.locator('.tr-quick-assist__trigger')).toHaveCount(0)
+
+  // 2. 点击指标卡片「问 AI」直接打开输入浮层并提交
+  await page.getByRole('button', { name: '询问 ECS 集群 CPU 使用率', exact: true }).click()
+  const popover = page.locator('.tr-quick-assist__popover')
+  await expect(popover).toBeVisible()
+  await popover.locator('.tr-quick-assist__suggestion').first().click()
+
+  const surface = page.locator('.tr-layout--floating')
+  await expect(surface).toBeVisible()
+  await expect(surface).toContainText('CPU 使用率达到 94%')
+  await expect(surface).toContainText('这是本地协议验证回复。')
+
+  // 3. 在 tr-chat 回复气泡内划词不应再次触发 QuickAssist（Light DOM 隔离验证）
+  const replyNode = surface.locator('.assistant-markdown').last()
+  await expect(replyNode).toBeVisible()
+  await replyNode.evaluate((node) => {
+    const range = document.createRange()
+    range.selectNodeContents(node)
+    const selection = window.getSelection()!
+    selection.removeAllRanges()
+    selection.addRange(range)
+    document.dispatchEvent(new Event('selectionchange'))
+    node.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }))
+  })
+  await expect(page.locator('.tr-quick-assist__trigger')).toHaveCount(0)
+  expect(errors).toEqual([])
+})

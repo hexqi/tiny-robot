@@ -12,6 +12,7 @@ const types = {
   '.json': 'application/json',
 }
 for (const [host, port] of [
+  ['js', 4547],
   ['angular', 4548],
   ['react', 4549],
 ]) {

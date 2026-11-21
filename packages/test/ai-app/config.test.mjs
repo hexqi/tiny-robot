@@ -1,8 +1,10 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
+import { createChatConfig as js } from '../../../examples/tr-chat-app-js/src/chat/config.ts'
 import { createChatConfig as angular } from '../../../examples/tr-chat-app-angular/src/chat/config.ts'
 import { createChatConfig as react } from '../../../examples/tr-chat-app-react/src/chat/config.ts'
 for (const [host, create] of [
+  ['js', js],
   ['angular', angular],
   ['react', react],
 ]) {

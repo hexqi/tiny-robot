@@ -1,11 +1,17 @@
 import './floating-assistant.css'
-import { useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
+import { useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type Ref } from 'react'
 import { createPortal } from 'react-dom'
 import type { ChatHeaderSlotProps, ChatRuntime, ChatUIOptions, LayoutFloatingState } from '@opentiny/tiny-robot-chat'
 import type { ChatRenderers, TrChatHTMLElement } from '@opentiny/tiny-robot-chat/experimental'
 import { bubbleRenderers } from './markdown'
 import { CopyReply, replyText } from './reply-actions'
 import { fromReact } from './react-renderer'
+import type { QuickAssistContextSummary } from './quick-assist-bridge'
+
+export interface FloatingAssistantHandle {
+  open: () => Promise<void>
+  getChatElement: () => TrChatHTMLElement | null
+}
 
 function WindowHeader({
   scope,
@@ -197,10 +203,34 @@ function HistoryPanel({
   )
 }
 
-export function FloatingAssistant({ runtime, ui }: { runtime: ChatRuntime; ui: ChatUIOptions }) {
+export function FloatingAssistant({
+  runtime,
+  ui,
+  assistantRef,
+  assistContext,
+  onClearAssistContext,
+}: {
+  runtime: ChatRuntime
+  ui: ChatUIOptions
+  assistantRef?: Ref<FloatingAssistantHandle>
+  assistContext?: QuickAssistContextSummary | null
+  onClearAssistContext?: () => void
+}) {
   const ref = useRef<TrChatHTMLElement>(null)
   const launcher = useRef<HTMLButtonElement>(null)
   const [open, setOpen] = useState(false)
+  useImperativeHandle(
+    assistantRef,
+    () => ({
+      open: () =>
+        new Promise<void>((resolve) => {
+          setOpen(true)
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+        }),
+      getChatElement: () => ref.current,
+    }),
+    [],
+  )
   const [fullscreen, setFullscreen] = useState(false)
   const [historyOpen, setHistoryOpen] = useState(false)
   const [viewport, setViewport] = useState({ width: innerWidth, height: innerHeight })
@@ -276,6 +306,29 @@ export function FloatingAssistant({ runtime, ui }: { runtime: ChatRuntime; ui: C
         close={close}
       />
     ))
+    const contextBar = assistContext
+      ? fromReact(() => (
+          <div className="assistant-context-bar" role="status">
+            <div className="assistant-context-meta">
+              <span className="assistant-context-tag">QuickAssist 引用</span>
+              <span className="assistant-context-text" title={assistContext.selectedText}>
+                {assistContext.selectedText}
+              </span>
+              <span className="assistant-context-tenant">租户：{assistContext.sanitizedTenant}</span>
+            </div>
+            {onClearAssistContext && (
+              <button
+                type="button"
+                className="assistant-context-clear"
+                aria-label="清除引用上下文"
+                onClick={onClearAssistContext}
+              >
+                清除
+              </button>
+            )}
+          </div>
+        ))
+      : undefined
     return {
       'layout-header': (scope, lifecycle) => {
         queueMicrotask(() => {
@@ -284,12 +337,13 @@ export function FloatingAssistant({ runtime, ui }: { runtime: ChatRuntime; ui: C
         placeHistory()
         return header(scope, lifecycle)
       },
+      ...(contextBar ? { 'composer-before': contextBar } : {}),
       'bubble-after': fromReact((scope) => {
         const text = replyText(scope)
         return text ? <CopyReply text={text} /> : null
       }),
     }
-  }, [runtime, fullscreen, historyOpen, floatingState])
+  }, [runtime, fullscreen, historyOpen, floatingState, assistContext, onClearAssistContext])
   const chatUI = useMemo<ChatUIOptions>(
     () => ({
       ...ui,

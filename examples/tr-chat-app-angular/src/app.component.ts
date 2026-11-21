@@ -2,7 +2,7 @@ import { Component, DestroyRef, inject } from '@angular/core'
 import type { ChatRuntime, ChatUIOptions } from '@opentiny/tiny-robot-chat'
 import { env } from './environments/env.generated'
 import { createChatConfig } from './chat/config'
-import { createAppRuntime } from './chat/runtime'
+import { createAppRuntime, type RuntimeMode } from './chat/runtime'
 import { ChatPageComponent } from './pages/chat-page.component'
 import { WorkspacePageComponent } from './pages/workspace-page.component'
 
@@ -15,6 +15,7 @@ import { WorkspacePageComponent } from './pages/workspace-page.component'
 export class AppComponent {
   readonly workspace = location.pathname.replace(/\/+$/, '') === '/workspace'
   runtime?: ChatRuntime
+  runtimeMode: RuntimeMode = 'live'
   ui: ChatUIOptions = {}
   error = ''
   dark = localStorage.getItem('tiny-robot-color-mode') === 'dark'
@@ -23,9 +24,9 @@ export class AppComponent {
     const destroy = inject(DestroyRef)
     try {
       const config = createChatConfig(env, location.origin)
-      if (!config.modelProviders.length) return
       const owned = createAppRuntime(config)
       this.runtime = owned.runtime
+      this.runtimeMode = owned.mode
       this.ui = config.ui
       destroy.onDestroy(() => {
         void owned.dispose().catch(console.error)

@@ -104,6 +104,10 @@ QuickAssist 的 `/vanilla` 运行时代码不依赖 Vue、Angular 等框架运�
 
 下面的示例将 QuickAssist 与 TinyRobot 的 `TrBubbleList`、`TrSender` 联动，并用本地模拟回复代替后端：选中示例正文中的文字并提交后，对话面板自动展开并发送 `prompt` 与经过 `sanitizeContext` 脱敏后的 `context`。
 
+::: tip 跨技术栈联合 `tr-chat` 完整实践
+如需将 QuickAssist 与框架无关的 **`tr-chat` Web Component**（含流式回复、历史会话、悬浮窗与真实大模型）联合使用在原生 JS、React、Angular、Vue 项目中，请查看最佳实践指南：[QuickAssist 与 TrChat 联合实践](/best-practices/quick-assist-with-tr-chat)。
+:::
+
 <demo vue="../../demos/quick-assist/vue-chat.vue" title="Vue 对话面板接入" description="划词后打开 TinyRobot 对话面板，并自动提交 prompt 与脱敏上下文。" />
 
 ### HTML 接入 {#example-html}

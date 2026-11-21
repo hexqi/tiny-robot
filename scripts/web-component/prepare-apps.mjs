@@ -6,7 +6,7 @@ import { copyAppForTest, testProjectsRoot } from '../../packages/test/ai-app/pro
 
 if (!process.argv.includes('--skip-build')) run('pnpm', ['build:components'])
 const candidate = packCandidate(root)
-for (const host of ['angular', 'react']) {
+for (const host of ['js', 'angular', 'react']) {
   const project = path.join(testProjectsRoot, host)
   copyAppForTest(path.join(root, `examples/tr-chat-app-${host}`), project)
   installCandidate(project, candidate)

@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { defineTrChatElements } from '@opentiny/tiny-robot-chat/experimental'
 import '@opentiny/tiny-robot-chat/experimental/web-component.css'
+import '@opentiny/tiny-robot/vanilla/style.css'
 import './style.css'
 import { App } from './app'
 defineTrChatElements()

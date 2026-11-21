@@ -71,7 +71,10 @@ const sharedSidebarItems = [
   {
     text: '最佳实践',
     base: '/best-practices/',
-    items: [{ text: 'MCP 与 Skill 扩展管理', link: 'extension-manager-integration' }],
+    items: [
+      { text: 'MCP 与 Skill 扩展管理', link: 'extension-manager-integration' },
+      { text: 'QuickAssist 与 TrChat 联合实践', link: 'quick-assist-with-tr-chat' },
+    ],
   },
   {
     text: '图标',

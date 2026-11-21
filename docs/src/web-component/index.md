@@ -205,3 +205,5 @@ chat.addEventListener('floating-state-update', (event) => {
 | `unknown`、`metadata`、自定义 attributes                                                                        | 由调用方保证兼容            | 普通数据或约定的业务值；不能据类型宽泛推定为任意框架组件可用       |
 
 Web Component 在浏览器 DOM 中工作，样式参与当前页面的 CSS 层叠。应用可通过主题变量调整外观，参见 [主题配置](../guide/theme-config)。
+
+如需在业务工作台中结合无框架划词组件 **QuickAssist** 自动触发并驱动 `tr-chat`（覆盖原生 JS、React、Angular、Vue），参见最佳实践指南：[QuickAssist 与 TrChat 联合实践](../best-practices/quick-assist-with-tr-chat)。

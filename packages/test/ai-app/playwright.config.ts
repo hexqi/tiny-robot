@@ -13,6 +13,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   projects: [
+    { name: 'js-app', use: { baseURL: 'http://127.0.0.1:4547' } },
     { name: 'angular-app', use: { baseURL: 'http://127.0.0.1:4548' } },
     { name: 'react-app', use: { baseURL: 'http://127.0.0.1:4549' } },
   ],
